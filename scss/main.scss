@@ -68,4 +68,88 @@ main {
     }
 }
 
+// Cursor for typewriter
+.txt-type > .txt {
+    border-right: #777 0.2rem solid;
+}
+
+// About page
+.about-info {
+    display: grid;
+    grid-template-areas: 'bioimage bio bio';
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    .bio-image {
+        grid-area: bioimage;
+        margin: auto;
+        border-radius: 50%;
+        border: $secondary-color 3px solid;
+    }
+    .bio {
+        grid-area: bio;
+        font-size: 1.5rem;
+    }
+}
+
+// Buttons
+.btn {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 0;
+    margin-bottom: 0.3rem;
+    &:hover {
+        background: $secondary-color;
+        color: set-text-color($secondary-color);
+    }
+}
+
+.btn-dark {
+    @extend .btn;
+    background: darken($color: $primary-color, $amount: 50);
+    color: #fff;
+}
+
+.btn-light {
+    @extend .btn;
+    background: lighten($color: $primary-color, $amount: 50);
+    color: #333;
+}
+
+.btn-dark-round {
+    @extend .btn-dark;
+    border-radius: 10px;
+}
+
+.btn-light-round {
+    @extend .btn-light;
+    border-radius: 10px;
+}
+
+.btn-light-round-cv {
+    @extend .btn-light-round;
+    width: 25%;
+}
+
+// Footer
+#main-footer {
+    text-align: center;
+    padding: 1rem;
+    background: darken($color: $primary-color, $amount: 10);
+    color: set-text-color($primary-color);
+    height: 90px;
+    .copyright {
+        font-size: small;
+        margin-top: 0.5rem;
+    }
+    .icons {
+        a {
+            padding: 0.4rem;
+            &:hover {
+                color: $secondary-color;
+                @include easeOut;
+            }
+        }
+    }
+}
+
 @import 'mobile';

@@ -1,9 +1,17 @@
 // Wide screens
 @include mediaXl {
+    .btn-light-round {
+        width: 16vw;
+        text-align: center;
+    }
 }
 
 // Desktops & laptops
 @include mediaLg {
+    .btn-light-round {
+        width: 24vw;
+        text-align: center;
+    }
 }
 
 // Tablets & small laptops
@@ -38,6 +46,10 @@
             height: 150px;
         }
     }
+    .btn-light-round {
+        width: 37vw;
+        text-align: center;
+    }
 }
 
 // Smartphones
@@ -67,5 +79,13 @@
             width: 150px;
             height: 150px;
         }
+    }
+    .btn-light-round-cv {
+        width: 37vw;
+        text-align: center;
+    }
+    .btn-light-round-edu {
+        width: 48vw;
+        text-align: center;
     }
 }

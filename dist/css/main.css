@@ -152,6 +152,74 @@ main {
     main#home h1 {
       margin-top: 20vh; }
 
+.txt-type > .txt {
+  border-right: #777 0.2rem solid; }
+
+.about-info {
+  display: grid;
+  grid-template-areas: 'bioimage bio bio';
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 30px; }
+  .about-info .bio-image {
+    grid-area: bioimage;
+    margin: auto;
+    border-radius: 50%;
+    border: #6b9feee7 3px solid; }
+  .about-info .bio {
+    grid-area: bio;
+    font-size: 1.5rem; }
+
+.btn, .btn-dark, .btn-dark-round, .btn-light, .btn-light-round, .btn-light-round-cv {
+  display: block;
+  padding: 0.5rem 1rem;
+  border: 0;
+  margin-bottom: 0.3rem; }
+  .btn:hover, .btn-dark:hover, .btn-dark-round:hover, .btn-light:hover, .btn-light-round:hover, .btn-light-round-cv:hover {
+    background: #6b9feee7;
+    color: #000; }
+
+.btn-dark, .btn-dark-round {
+  background: black;
+  color: #fff; }
+
+.btn-light, .btn-light-round, .btn-light-round-cv {
+  background: #b8b6b6;
+  color: #333; }
+
+.btn-dark-round {
+  border-radius: 10px; }
+
+.btn-light-round, .btn-light-round-cv {
+  border-radius: 10px; }
+
+.btn-light-round-cv {
+  width: 25%; }
+
+#main-footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #fff;
+  height: 90px; }
+  #main-footer .copyright {
+    font-size: small;
+    margin-top: 0.5rem; }
+  #main-footer .icons a {
+    padding: 0.4rem; }
+    #main-footer .icons a:hover {
+      color: #6b9feee7;
+      transition: all 0.5s ease-out; }
+
+@media screen and (min-width: 1171px) {
+  .btn-light-round, .btn-light-round-cv {
+    width: 16vw;
+    text-align: center; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .btn-light-round, .btn-light-round-cv {
+    width: 24vw;
+    text-align: center; } }
+
 @media screen and (min-width: 501px) and (max-width: 768px) {
   main {
     align-items: center;
@@ -175,7 +243,10 @@ main {
     .menu-photo .portrait {
       background: url("../img/portrait_small.jpg");
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .btn-light-round, .btn-light-round-cv {
+    width: 37vw;
+    text-align: center; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -197,4 +268,10 @@ main {
     .menu-photo .portrait {
       background: url("../img/portrait_small.jpg");
       width: 150px;
-      height: 150px; } }
+      height: 150px; }
+  .btn-light-round-cv {
+    width: 37vw;
+    text-align: center; }
+  .btn-light-round-edu {
+    width: 48vw;
+    text-align: center; } }
