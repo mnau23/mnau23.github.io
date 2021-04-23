@@ -46,6 +46,16 @@
             height: 150px;
         }
     }
+    .about-info {
+        grid-template-areas:
+        'bioimage'
+        'bio';
+        grid-template-columns: 1fr;
+    }
+    .more {
+        display: flex;
+        flex-direction: column;
+    }
     .btn-light-round {
         width: 37vw;
         text-align: center;
@@ -79,6 +89,14 @@
             width: 150px;
             height: 150px;
         }
+    }
+    .about-info {
+        display: flex;
+        flex-direction: column;
+    }
+    .more {
+        display: flex;
+        flex-direction: column;
     }
     .btn-light-round-cv {
         width: 37vw;

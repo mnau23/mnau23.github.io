@@ -169,12 +169,55 @@ main {
     grid-area: bio;
     font-size: 1.5rem; }
 
-.btn, .btn-dark, .btn-dark-round, .btn-light, .btn-light-round, .btn-light-round-cv {
+.more {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px; }
+  .more .skills {
+    display: grid;
+    padding: 0 20px; }
+    .more .skills .skill-name {
+      font-size: 18px;
+      font-weight: 500;
+      margin: 20px 0; }
+    .more .skills .skill-bar {
+      height: 20px;
+      background: #c5c5c5;
+      border-radius: 8px; }
+    .more .skills .skill-per {
+      height: 20px;
+      background-color: #6b9feee7;
+      border-radius: 8px;
+      width: 0;
+      transition: 2s linear;
+      position: relative;
+      font-weight: 900; }
+  .more .edu-cert {
+    padding: 0 20px; }
+    .more .edu-cert .edu-title {
+      margin-bottom: 30px; }
+    .more .edu-cert .uni {
+      display: grid;
+      grid-gap: 30px; }
+      .more .edu-cert .uni .edu {
+        background: #454444;
+        padding: 0.5rem;
+        border-bottom: 5px solid #6b9feee7; }
+    .more .edu-cert .cert {
+      max-width: 600px; }
+      .more .edu-cert .cert h1 {
+        padding: 30px 0 10px; }
+      .more .edu-cert .cert ul {
+        margin-top: 0; }
+        .more .edu-cert .cert ul li {
+          padding-bottom: 10px; }
+
+.btn, .btn-dark, .btn-dark-round, .btn-light, .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-dark-round:hover, .btn-light:hover, .btn-light-round:hover, .btn-light-round-cv:hover {
+  .btn:hover, .btn-dark:hover, .btn-dark-round:hover, .btn-light:hover, .btn-light-round:hover, .btn-light-round-cv:hover, .btn-light-round-edu:hover {
     background: #6b9feee7;
     color: #000; }
 
@@ -182,18 +225,21 @@ main {
   background: black;
   color: #fff; }
 
-.btn-light, .btn-light-round, .btn-light-round-cv {
+.btn-light, .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
   background: #b8b6b6;
   color: #333; }
 
 .btn-dark-round {
   border-radius: 10px; }
 
-.btn-light-round, .btn-light-round-cv {
+.btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
   border-radius: 10px; }
 
 .btn-light-round-cv {
   width: 25%; }
+
+.btn-light-round-edu {
+  width: 32%; }
 
 #main-footer {
   text-align: center;
@@ -211,12 +257,12 @@ main {
       transition: all 0.5s ease-out; }
 
 @media screen and (min-width: 1171px) {
-  .btn-light-round, .btn-light-round-cv {
+  .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 16vw;
     text-align: center; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .btn-light-round, .btn-light-round-cv {
+  .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 24vw;
     text-align: center; } }
 
@@ -244,7 +290,13 @@ main {
       background: url("../img/portrait_small.jpg");
       width: 150px;
       height: 150px; }
-  .btn-light-round, .btn-light-round-cv {
+  .about-info {
+    grid-template-areas: 'bioimage' 'bio';
+    grid-template-columns: 1fr; }
+  .more {
+    display: flex;
+    flex-direction: column; }
+  .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 37vw;
     text-align: center; } }
 
@@ -269,6 +321,12 @@ main {
       background: url("../img/portrait_small.jpg");
       width: 150px;
       height: 150px; }
+  .about-info {
+    display: flex;
+    flex-direction: column; }
+  .more {
+    display: flex;
+    flex-direction: column; }
   .btn-light-round-cv {
     width: 37vw;
     text-align: center; }

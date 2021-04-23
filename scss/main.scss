@@ -91,6 +91,66 @@ main {
     }
 }
 
+// Education page
+.more {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 50px;
+    .skills {
+        display: grid;  // flex
+        //align-items: center;
+        //justify-content: center;
+        padding: 0 20px;
+        .skill-name {
+            font-size: 18px;
+            font-weight: 500;
+            //text-transform: uppercase;
+            margin: 20px 0;
+        }
+        .skill-bar {
+            height: 20px;
+            background: #c5c5c5;
+            border-radius: 8px;
+        }
+        .skill-per {
+            height: 20px;
+            background-color: $secondary-color;
+            border-radius: 8px;
+            width: 0;
+            transition: 2s linear;
+            position: relative;
+            font-weight: 900;
+        }
+    }
+    .edu-cert {
+        padding: 0 20px;
+        .edu-title {
+            margin-bottom: 30px;
+        }
+        .uni {
+            display: grid;
+            grid-gap: 30px;
+            .edu {
+                background: lighten($color: $primary-color, $amount: 5);
+                padding: 0.5rem;
+                border-bottom: 5px solid $secondary-color;
+            }
+        }
+        .cert {
+            max-width: 600px;
+            h1 {
+                padding: 30px 0 10px;
+            }
+            ul {
+                margin-top: 0;
+                li {
+                    padding-bottom: 10px;
+                }
+            }
+        }
+    }
+}
+
 // Buttons
 .btn {
     display: block;
@@ -128,6 +188,11 @@ main {
 .btn-light-round-cv {
     @extend .btn-light-round;
     width: 25%;
+}
+
+.btn-light-round-edu {
+    @extend .btn-light-round;
+    width: 32%;
 }
 
 // Footer
