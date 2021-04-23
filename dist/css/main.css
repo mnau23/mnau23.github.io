@@ -192,6 +192,27 @@ main {
       transition: 2s linear;
       position: relative;
       font-weight: 900; }
+      .more .skills .skill-per::before {
+        content: attr(percentage);
+        position: absolute;
+        padding: 4px 6px;
+        background-color: #fff;
+        color: #383737;
+        font-size: 12px;
+        border-radius: 4px;
+        top: -35px;
+        right: 0;
+        transform: translateX(50%); }
+      .more .skills .skill-per::after {
+        content: '';
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        border-radius: 2px;
+        top: -16px;
+        right: 0;
+        transform: translateX(50%) rotate(45deg); }
   .more .edu-cert {
     padding: 0 20px; }
     .more .edu-cert .edu-title {
@@ -241,6 +262,75 @@ main {
 .btn-light-round-edu {
   width: 32%; }
 
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  border: 2px solid #6b9feee7;
+  border-radius: 10px;
+  z-index: 10;
+  background-color: #383737;
+  width: 500px;
+  max-width: 70%; }
+  .modal .modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #6b9feee7; }
+  .modal .modal-header .title {
+    font-size: 1.25rem;
+    font-weight: bold; }
+  .modal .modal-header .close-btn {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.5rem;
+    font-weight: bold; }
+  .modal .modal-body {
+    padding: 10px 15px; }
+
+#modal-msc li, #modal-ttu li, #modal-bsc li {
+  list-style: none; }
+
+#modal-msc {
+  height: 80vh; }
+
+#modal-bsc {
+  height: 80vh;
+  overflow-y: scroll; }
+  #modal-bsc::-webkit-scrollbar {
+    width: 5px; }
+  #modal-bsc::-webkit-scrollbar-track {
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 5px 20px 5px 0;
+    background-color: white; }
+  #modal-bsc::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px #383737; }
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1); }
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none; }
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all; }
+
 #main-footer {
   text-align: center;
   padding: 1rem;
@@ -259,12 +349,31 @@ main {
 @media screen and (min-width: 1171px) {
   .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 16vw;
-    text-align: center; } }
+    text-align: center; }
+  #modal-msc {
+    max-height: 450px; }
+  #modal-bsc {
+    max-height: 600px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 24vw;
-    text-align: center; } }
+    text-align: center; }
+  #modal-msc {
+    max-height: 300px;
+    overflow-y: scroll; }
+    #modal-msc::-webkit-scrollbar {
+      width: 5px; }
+    #modal-msc::-webkit-scrollbar-track {
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 5px 20px 5px 0;
+      background-color: white; }
+    #modal-msc::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px #383737; }
+  #modal-bsc {
+    max-height: 350px; } }
 
 @media screen and (min-width: 501px) and (max-width: 768px) {
   main {
@@ -298,7 +407,22 @@ main {
     flex-direction: column; }
   .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 37vw;
-    text-align: center; } }
+    text-align: center; }
+  #modal-msc {
+    max-height: 250px;
+    overflow-y: scroll; }
+    #modal-msc::-webkit-scrollbar {
+      width: 5px; }
+    #modal-msc::-webkit-scrollbar-track {
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 5px 20px 5px 0;
+      background-color: white; }
+    #modal-msc::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px #383737; }
+  #modal-bsc {
+    max-height: 300px; } }
 
 @media screen and (max-width: 500px) {
   main#home h1 {
@@ -327,6 +451,21 @@ main {
   .more {
     display: flex;
     flex-direction: column; }
+  #modal-msc, #modal-ttu {
+    max-height: 200px;
+    overflow-y: scroll; }
+    #modal-msc::-webkit-scrollbar, #modal-ttu::-webkit-scrollbar {
+      width: 5px; }
+    #modal-msc::-webkit-scrollbar-track, #modal-ttu::-webkit-scrollbar-track {
+      border: 1px solid black;
+      border-radius: 10px;
+      margin: 5px 20px 5px 0;
+      background-color: white; }
+    #modal-msc::-webkit-scrollbar-thumb, #modal-ttu::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      box-shadow: inset 0 0 10px #383737; }
+  #modal-bsc {
+    max-height: 250px; }
   .btn-light-round-cv {
     width: 37vw;
     text-align: center; }
