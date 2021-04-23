@@ -64,12 +64,26 @@
                     I am open to any suggestions and improvements.
                     <i class="fas fa-smile-beam"></i>
                 </p>
-                <a href="#!" class="btn-light-round-cv">
+                <a href="#!" data-modal-target="#modal-cv" class="btn-light-round-cv">
                     <i class="fas fa-paperclip"></i> Get my CV!
                 </a>
             </div>
         </div>
     </main>
+
+    <div class="modal" id="modal-cv">
+        <div class="modal-header">
+            <div class="title">Curriculum Vitae</div>
+            <a href="#!" data-close-btn class="close-btn">&times;</a>
+            <!--Button-->
+        </div>
+        <div class="modal-body">
+            To be released asap.<br>
+            Contact me if you want a pre-release version.
+        </div>
+    </div>
+
+    <div id="overlay"></div>
 
     <footer id="main-footer">
         <div class="icons">
@@ -95,6 +109,7 @@
     </footer>
 
     <script src="js/menu.js"></script>
+    <script src="js/modal.js"></script>
 </body>
 
 </html>
