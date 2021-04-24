@@ -547,9 +547,11 @@ main {
     font-size: 1.25rem; }
   main p, a {
     font-size: 1rem; }
-  main#home h1 {
-    margin-top: 10vh;
-    text-align: center; }
+  main {
+    align-items: center; }
+    main#home h1 {
+      margin-top: 10vh;
+      text-align: center; }
   ul.menu-nav, div.menu-photo {
     float: none;
     width: 100%;
