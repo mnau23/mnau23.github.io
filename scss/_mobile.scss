@@ -1,5 +1,8 @@
 // Wide screens
 @include mediaXl {
+    .contact-info {
+        margin-right: 30px;
+    }
     .btn-light-round {
         width: 16vw;
         text-align: center;
@@ -14,6 +17,9 @@
 
 // Desktops & laptops
 @include mediaLg {
+    .contact-info {
+        margin-right: 30px;
+    }
     .btn-light-round {
         width: 24vw;
         text-align: center;
@@ -82,6 +88,20 @@
         display: flex;
         flex-direction: column;
     }
+    .container {
+        flex-direction: column;
+        .contact-info {
+            margin-bottom: 40px;
+            padding: 0 50px 0;
+            align-items: flex-start;
+            .text {
+                text-align: left;
+            }
+        }
+        .contact-info, .contact-form {
+            width: 100%;
+        }
+    }
     .btn-light-round {
         width: 37vw;
         text-align: center;
@@ -143,6 +163,26 @@
     .more {
         display: flex;
         flex-direction: column;
+    }
+    .container {
+        flex-direction: column;
+        .contact-info {
+            margin-bottom: 40px;
+            padding: 0 5px 0;
+            align-items: flex-start;
+            .infobox {
+                justify-content: center;
+                .icon {
+                    align-self: center;
+                }
+                .text {
+                    text-align: left;
+                }
+            }
+        }
+        .contact-info, .contact-form {
+            width: 100%;
+        }
     }
     #modal-msc, #modal-ttu {
         max-height: 200px;

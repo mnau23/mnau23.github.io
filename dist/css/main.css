@@ -233,6 +233,90 @@ main {
         .more .edu-cert .cert ul li {
           padding-bottom: 10px; }
 
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; }
+  .container .contact-info {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px; }
+    .container .contact-info .infobox {
+      position: relative;
+      padding: 10px 0;
+      display: flex; }
+      .container .contact-info .infobox .icon {
+        min-width: 60px;
+        height: 60px;
+        background: #5f5d5d;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        font-size: 25px; }
+      .container .contact-info .infobox .text {
+        display: flex;
+        margin-left: 20px;
+        font-size: 16px;
+        flex-direction: column; }
+        .container .contact-info .infobox .text h3 {
+          font-weight: 800;
+          color: #6b9feee7;
+          margin-bottom: -15px; }
+        .container .contact-info .infobox .text #address {
+          color: transparent;
+          text-shadow: 0 0 15px #fff; }
+  .container .contact-form {
+    width: 60%;
+    height: 450px;
+    padding: 30px;
+    background: #454444;
+    border-bottom: 5px solid #6b9feee7; }
+    .container .contact-form h2 {
+      font-size: 30px;
+      font-weight: 800; }
+    .container .contact-form .input-box {
+      position: relative;
+      width: 100%;
+      margin-top: 10px; }
+      .container .contact-form .input-box input {
+        width: 100%;
+        height: 35px;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 15px 0;
+        border: none;
+        border-bottom: 2px solid #6b9feee7;
+        background-color: #c5c5c5;
+        color: #000;
+        outline: none;
+        resize: none; }
+        .container .contact-form .input-box input:focus ~ span, .container .contact-form .input-box input:valid ~ span {
+          color: #6b9feee7;
+          font-size: 12px;
+          transform: translateY(-25px); }
+      .container .contact-form .input-box span {
+        position: absolute;
+        left: 0;
+        padding: 5px 0;
+        font-size: 16px;
+        margin: 10px 0;
+        pointer-events: none;
+        transition: 0.5s;
+        color: #666; }
+    .container .contact-form button {
+      width: 100px;
+      background: #6b9feee7;
+      color: #000;
+      border: none;
+      cursor: pointer;
+      margin-top: 30px;
+      padding: 10px;
+      font-size: 18px; }
+
 .btn, .btn-dark, .btn-dark-round, .btn-light, .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
   display: block;
   padding: 0.5rem 1rem;
@@ -347,6 +431,8 @@ main {
       transition: all 0.5s ease-out; }
 
 @media screen and (min-width: 1171px) {
+  .contact-info {
+    margin-right: 30px; }
   .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 16vw;
     text-align: center; }
@@ -356,6 +442,8 @@ main {
     max-height: 600px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
+  .contact-info {
+    margin-right: 30px; }
   .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 24vw;
     text-align: center; }
@@ -405,6 +493,16 @@ main {
   .more {
     display: flex;
     flex-direction: column; }
+  .container {
+    flex-direction: column; }
+    .container .contact-info {
+      margin-bottom: 40px;
+      padding: 0 50px 0;
+      align-items: flex-start; }
+      .container .contact-info .text {
+        text-align: left; }
+    .container .contact-info, .container .contact-form {
+      width: 100%; }
   .btn-light-round, .btn-light-round-cv, .btn-light-round-edu {
     width: 37vw;
     text-align: center; }
@@ -451,6 +549,20 @@ main {
   .more {
     display: flex;
     flex-direction: column; }
+  .container {
+    flex-direction: column; }
+    .container .contact-info {
+      margin-bottom: 40px;
+      padding: 0 5px 0;
+      align-items: flex-start; }
+      .container .contact-info .infobox {
+        justify-content: center; }
+        .container .contact-info .infobox .icon {
+          align-self: center; }
+        .container .contact-info .infobox .text {
+          text-align: left; }
+    .container .contact-info, .container .contact-form {
+      width: 100%; }
   #modal-msc, #modal-ttu {
     max-height: 200px;
     overflow-y: scroll; }
