@@ -59,7 +59,7 @@
         transform: translate3d(0, -100%, 0);
         @include easeOut;
         &.show {
-            transform: translate3d(0,0,0);  // slide in from the top
+            transform: translate3d(0, 0, 0);  // slide in from the top
         }
     }
     &-photo {
@@ -67,7 +67,7 @@
         transform: translate3d(0, 100%, 0);
         @include easeOut;
         &.show {
-            transform: translate3d(0,0,0);  // slide in from the bottom
+            transform: translate3d(0, 0, 0);  // slide in from the bottom
         }
         .portrait {
             width: 250px;
@@ -81,7 +81,7 @@
         transform: translate3d(600px, 0, 0);
         @include easeOut;
         &.show {
-            transform: translate3d(0,0,0);  // slide in from the right
+            transform: translate3d(0, 0, 0);  // slide in from the right
         }
         &.current > a {
             color: $secondary-color;
