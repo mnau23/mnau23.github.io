@@ -25,7 +25,7 @@
         text-align: center;
     }
     #modal-msc {
-        max-height: 300px;
+        max-height: 40vh;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             width: 5px;
@@ -42,7 +42,7 @@
         }
     }
     #modal-bsc {
-        max-height: 350px;
+        max-height: 40vh;
     }
 }
 
@@ -121,7 +121,7 @@
         text-align: center;
     }
     #modal-msc {
-        max-height: 250px;
+        max-height: 40vh;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             width: 5px;
@@ -138,7 +138,7 @@
         }
     }
     #modal-bsc {
-        max-height: 300px;
+        max-height: 40vh;
     }
 }
 
@@ -185,6 +185,11 @@
     .about-info {
         display: flex;
         flex-direction: column;
+        .bio-image {
+            background: url('../img/portrait_small.jpg');
+            width: 150px;
+            height: 150px;
+        }
     }
     .more {
         display: flex;
@@ -224,7 +229,7 @@
         }
     }
     #modal-msc, #modal-ttu {
-        max-height: 200px;
+        max-height: 50vh;
         overflow-y: scroll;
         &::-webkit-scrollbar {
             width: 5px;
@@ -241,7 +246,7 @@
         }
     }
     #modal-bsc {
-        max-height: 250px;
+        max-height: 50vh;
     }
     .btn-light-round-cv {
         width: 37vw;
