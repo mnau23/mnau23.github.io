@@ -1,8 +1,7 @@
-This repository contains the source code of my personal website.
+This repository contains the source code of my personal [website](https://mnau23.github.io/).
 
----
-### :information_source: Useful links
-Here are the links to the resources I used.
+## :information_source: Useful links
+Here are some links to the resources I used.
 
 - Buy me a coffee: [link](https://www.buymeacoffee.com)
 - Favicon Generator: [link](https://favicon.io)
