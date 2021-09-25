@@ -385,7 +385,7 @@ main {
   .modal .modal-body {
     padding: 10px 15px; }
 
-#modal-msc li, #modal-ttu li, #modal-bsc li {
+#modal-msc li, #modal-sdu li, #modal-ttu li, #modal-bsc li {
   list-style: none; }
 
 #modal-msc {
