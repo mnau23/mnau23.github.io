@@ -31,7 +31,7 @@ $background-opacity: 0.7;
 
 // Set text color
 @function set-text-color($color) {
-    @if (color.lightness($color) > 40) {
+    @if (color.channel($color, "lightness", $space: hsl) > 40) {
         @return #000;
     } @else {
         @return #fff;

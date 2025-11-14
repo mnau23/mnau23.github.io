@@ -57,7 +57,7 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: color.adjust($color: config.$primary-color, $lightness: -5);
+        background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) - 5);
         list-style: none;
         transform: translate3d(0, -100%, 0);
         @include config.easeOut;
