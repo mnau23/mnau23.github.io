@@ -1,3 +1,4 @@
+@use "sass:color";
 $primary-color: rgb(56, 55, 55);
 $secondary-color: #6b9feee7;
 $show-home-image: true;
@@ -30,7 +31,7 @@ $background-opacity: 0.7;
 
 // Set text color
 @function set-text-color($color) {
-    @if (lightness($color) > 40) {
+    @if (color.lightness($color) > 40) {
         @return #000;
     } @else {
         @return #fff;
