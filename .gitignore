@@ -1,6 +1,9 @@
 # Node.js dependencies
 node_modules
 
+# Sass CSS source maps
+dist/css/*.map
+
 # Other files
 _todo
 todo.md
