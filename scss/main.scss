@@ -32,7 +32,7 @@ h1, h2, h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(color.adjust($color: config.$primary-color, $lightness: 2), 0.5);
+        background: rgba(color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 2), 0.5);
     }
 }
 
@@ -156,7 +156,7 @@ main {
             display: grid;
             grid-gap: 30px;
             .edu {
-                background: color.adjust($color: config.$primary-color, $lightness: 5);
+                background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 5);
                 padding: 0.5rem;
                 border-bottom: 5px solid config.$secondary-color;
             }
@@ -195,7 +195,7 @@ main {
             .icon {
                 min-width: 60px;
                 height: 60px;
-                background: color.adjust($color: config.$primary-color, $lightness: 15);
+                background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 15);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -224,7 +224,7 @@ main {
         width: 60%;
         height: 450px;
         padding: 30px;
-        background: color.adjust($color: config.$primary-color, $lightness: 5);
+        background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 5);
         border-bottom: 5px solid config.$secondary-color;
         h2 {
             font-size: 30px;
@@ -298,13 +298,13 @@ main {
 
 .btn-dark {
     @extend .btn;
-    background: color.adjust($color: config.$primary-color, $lightness: -50);
+    background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) - 50);
     color: #fff;
 }
 
 .btn-light {
     @extend .btn;
-    background: color.adjust($color: config.$primary-color, $lightness: 50);
+    background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 50);
     color: #333;
 }
 
@@ -423,7 +423,7 @@ main {
 #main-footer {
     text-align: center;
     padding: 1rem;
-    background: color.adjust($color: config.$primary-color, $lightness: -10);
+    background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) - 10);
     color: config.set-text-color(config.$primary-color);
     height: 90px;
     .copyright {
