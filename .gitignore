@@ -1,3 +1,6 @@
-node_modules/
-_tbd/
-todo.txt
+# Node.js dependencies
+node_modules
+
+# Other files
+_todo/
+todo.md
