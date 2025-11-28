@@ -12,6 +12,6 @@
   "license": "MIT",
   "dependencies": {
     "gh-pages": "6.3.0",
-    "sass": "1.94.0"
+    "sass": "1.97.3"
   }
 }
