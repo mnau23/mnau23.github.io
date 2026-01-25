@@ -5,13 +5,17 @@
   "main": "index.js",
   "homepage": "https://github.com/mnau23/mnau23.github.io",
   "scripts": {
+    "deploy": "gh-pages -d dist",
     "sass": "sass --watch scss:dist/css",
-    "deploy": "gh-pages -d dist"
+    "serve": "serve dist"
   },
   "author": "mnau23",
   "license": "MIT",
   "dependencies": {
     "gh-pages": "6.3.0",
     "sass": "1.97.3"
+  },
+  "devDependencies": {
+    "serve": "14.2.5"
   }
 }
