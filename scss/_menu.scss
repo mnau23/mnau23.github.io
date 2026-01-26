@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "config";
+
 // Menu button
 .menu-btn {
     position: absolute;
@@ -5,13 +8,13 @@
     right: 35px;
     top: 35px;
     cursor: pointer;
-    @include easeOut;
+    @include config.easeOut;
     .btn-line {
         width: 28px;
         height: 3px;
         margin: 0 0 5px 0;
-        background: set-text-color($primary-color);
-        @include easeOut;
+        background: config.set-text-color(config.$primary-color);
+        @include config.easeOut;
     }
 
     // Rotate into X with menu lines
@@ -54,18 +57,18 @@
     &-nav {
         margin: 0;
         padding: 0;
-        background: darken($color: $primary-color, $amount: 5);
+        background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) - 5);
         list-style: none;
         transform: translate3d(0, -100%, 0);
-        @include easeOut;
+        @include config.easeOut;
         &.show {
             transform: translate3d(0, 0, 0);  // slide in from the top
         }
     }
     &-photo {
-        background: $primary-color;
+        background: config.$primary-color;
         transform: translate3d(0, 100%, 0);
-        @include easeOut;
+        @include config.easeOut;
         &.show {
             transform: translate3d(0, 0, 0);  // slide in from the bottom
         }
@@ -74,17 +77,17 @@
             height: 250px;
             background: url('../img/portrait.jpg');
             border-radius: 50%;
-            border: solid 3px $secondary-color;
+            border: solid 3px config.$secondary-color;
         }
     }
     .nav-item {
         transform: translate3d(600px, 0, 0);
-        @include easeOut;
+        @include config.easeOut;
         &.show {
             transform: translate3d(0, 0, 0);  // slide in from the right
         }
         &.current > a {
-            color: $secondary-color;
+            color: config.$secondary-color;
         }
     }
     .nav-link {
@@ -94,11 +97,11 @@
         text-transform: uppercase;
         padding: 1rem 0;
         font-weight: 400;
-        color: set-text-color($primary-color);
+        color: config.set-text-color(config.$primary-color);
         text-decoration: none;
-        @include easeOut;
+        @include config.easeOut;
         &:hover {
-            color: $secondary-color;
+            color: config.$secondary-color;
         }
     }
 }

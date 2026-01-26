@@ -1,5 +1,7 @@
-@import 'config';
-@import 'menu';
+@use "sass:color";
+@use "sass:meta";
+@use 'config';
+@use 'menu';
 @import url('https://fonts.googleapis.com/css?family=Raleway:200,100,400');
 
 * {
@@ -7,9 +9,9 @@
 }
 
 body {
-    @include background;
-    background: $primary-color;
-    color: set-text-color($primary-color);
+    @include config.background;
+    background: config.$primary-color;
+    color: config.set-text-color(config.$primary-color);
     height: 100%;
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -17,7 +19,7 @@ body {
 }
 
 .text-secondary {
-    color: $secondary-color;
+    color: config.$secondary-color;
 }
 
 // Headings
@@ -30,7 +32,7 @@ h1, h2, h3 {
     &.sm-heading {
         margin-bottom: 2rem;
         padding: 0.2rem 1rem;
-        background: rgba(lighten($color: $primary-color, $amount: 2), 0.5);
+        background: rgba(color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 2), 0.5);
     }
 }
 
@@ -55,8 +57,8 @@ main {
         a {
             padding: 0.4rem;
             &:hover {
-                color: $secondary-color;
-                @include easeOut;
+                color: config.$secondary-color;
+                @include config.easeOut;
             }
         }
     }
@@ -83,7 +85,7 @@ main {
         grid-area: bioimage;
         margin: auto;
         border-radius: 50%;
-        border: $secondary-color 3px solid;
+        border: config.$secondary-color 3px solid;
     }
     .bio {
         grid-area: bio;
@@ -114,7 +116,7 @@ main {
         }
         .skill-per {
             height: 20px;
-            background-color: $secondary-color;
+            background-color: config.$secondary-color;
             border-radius: 8px;
             width: 0;
             transition: 2s linear;
@@ -124,8 +126,8 @@ main {
                 content: attr(percentage);
                 position: absolute;
                 padding: 4px 6px;
-                background-color: set-text-color($primary-color);  //black;
-                color: $primary-color;
+                background-color: config.set-text-color(config.$primary-color);  //black;
+                color: config.$primary-color;
                 font-size: 12px;
                 border-radius: 4px;
                 top: -35px;
@@ -137,7 +139,7 @@ main {
                 position: absolute;
                 width: 10px;
                 height: 10px;
-                background-color: set-text-color($primary-color);  //black;
+                background-color: config.set-text-color(config.$primary-color);  //black;
                 border-radius: 2px;
                 top: -16px;
                 right: 0;
@@ -154,9 +156,9 @@ main {
             display: grid;
             grid-gap: 30px;
             .edu {
-                background: lighten($color: $primary-color, $amount: 5);
+                background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 5);
                 padding: 0.5rem;
-                border-bottom: 5px solid $secondary-color;
+                border-bottom: 5px solid config.$secondary-color;
             }
         }
         .cert {
@@ -193,7 +195,7 @@ main {
             .icon {
                 min-width: 60px;
                 height: 60px;
-                background: lighten($color: $primary-color, $amount: 15);
+                background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 15);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -208,7 +210,7 @@ main {
                 //font-weight: 300;
                 h3 {
                     font-weight: 800;
-                    color: $secondary-color;
+                    color: config.$secondary-color;
                     margin-bottom: -15px;
                 }
                 #address {
@@ -222,8 +224,8 @@ main {
         width: 60%;
         height: 450px;
         padding: 30px;
-        background: lighten($color: $primary-color, $amount: 5);
-        border-bottom: 5px solid $secondary-color;
+        background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 5);
+        border-bottom: 5px solid config.$secondary-color;
         h2 {
             font-size: 30px;
             font-weight: 800;
@@ -239,13 +241,13 @@ main {
                 font-size: 16px;
                 margin: 15px 0;
                 border: none;
-                border-bottom: 2px solid $secondary-color;
+                border-bottom: 2px solid config.$secondary-color;
                 background-color: #c5c5c5;
-                color: set-text-color($secondary-color);
+                color: config.set-text-color(config.$secondary-color);
                 outline: none;
                 resize: none;
                 &:focus ~ span, &:valid ~ span {
-                    color: $secondary-color;
+                    color: config.$secondary-color;
                     font-size: 12px;
                     transform: translateY(-25px);
                 }
@@ -263,8 +265,8 @@ main {
         }
         button {
             width: 100px;
-            background: $secondary-color;
-            color: set-text-color($secondary-color);
+            background: config.$secondary-color;
+            color: config.set-text-color(config.$secondary-color);
             border: none;
             cursor: pointer;
             margin-top: 30px;
@@ -289,20 +291,20 @@ main {
     border: 0;
     margin-bottom: 0.3rem;
     &:hover {
-        background: $secondary-color;
-        color: set-text-color($secondary-color);
+        background: config.$secondary-color;
+        color: config.set-text-color(config.$secondary-color);
     }
 }
 
 .btn-dark {
     @extend .btn;
-    background: darken($color: $primary-color, $amount: 50);
+    background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) - 50);
     color: #fff;
 }
 
 .btn-light {
     @extend .btn;
-    background: lighten($color: $primary-color, $amount: 50);
+    background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 50);
     color: #333;
 }
 
@@ -338,10 +340,10 @@ main {
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 200ms ease-in-out;
-    border: 2px solid $secondary-color;
+    border: 2px solid config.$secondary-color;
     border-radius: 10px;
     z-index: 10;
-    background-color: $primary-color;
+    background-color: config.$primary-color;
     width: 500px;
     max-width: 70%;
     .modal-header {
@@ -349,7 +351,7 @@ main {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-bottom: 2px solid $secondary-color;
+        border-bottom: 2px solid config.$secondary-color;
     }
     .modal-header .title {
         font-size: 1.25rem;
@@ -392,7 +394,7 @@ main {
     }
     &::-webkit-scrollbar-thumb {
         border-radius: 10px;
-        box-shadow: inset 0 0 10px $primary-color;
+        box-shadow: inset 0 0 10px config.$primary-color;
     }
 }
 
@@ -421,8 +423,8 @@ main {
 #main-footer {
     text-align: center;
     padding: 1rem;
-    background: darken($color: $primary-color, $amount: 10);
-    color: set-text-color($primary-color);
+    background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) - 10);
+    color: config.set-text-color(config.$primary-color);
     height: 90px;
     .copyright {
         font-size: small;
@@ -432,11 +434,11 @@ main {
         a {
             padding: 0.4rem;
             &:hover {
-                color: $secondary-color;
-                @include easeOut;
+                color: config.$secondary-color;
+                @include config.easeOut;
             }
         }
     }
 }
 
-@import 'mobile';
+@include meta.load-css('mobile');
