@@ -2,9 +2,10 @@
 
 ## General
 
-| Command       | Description          |
-| ------------- | -------------------- |
-| `npm install` | Install dependencies |
+| Command                    | Description                                 |
+| -------------------------- | ------------------------------------------- |
+| `npx npm-check-updates -u` | Check for version updates in `package.json` |
+| `npm install`              | Install dependencies                        |
 
 ## Custom
 
