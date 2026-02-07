@@ -1,3 +1,17 @@
+![license](https://img.shields.io/github/license/mnau23/mnau23.github.io)
+![version](https://img.shields.io/github/package-json/v/mnau23/mnau23.github.io)
+![repo-size](https://img.shields.io/github/repo-size/mnau23/mnau23.github.io)
+![last-commit](https://img.shields.io/github/last-commit/mnau23/mnau23.github.io)
+
 # Hello, World!
 
 > Source code of my personal [website](https://mnau23.github.io/).
+
+## 📚 Documentation
+
+See the documentation at [docs/index.md](./docs/index.md)
+
+## 🧱 Tech Stack
+
+- Sass for styles
+- GitHub Pages for deployment
