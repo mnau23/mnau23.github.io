@@ -2,10 +2,6 @@
 
 > Source code of my personal [website](https://mnau23.github.io/).
 
-## Troubleshooting
-
-If errors occur during the deploy script, delete the `node_modules/.cache` folder and then re-run it.
-
 ## Resources
 
 Here are some links to the resources I used.
