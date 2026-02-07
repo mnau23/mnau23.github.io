@@ -11,7 +11,7 @@
 
 | Command          | Description                                                       |
 | ---------------- | ----------------------------------------------------------------- |
-| `npm run sass`   | Compiles Sass files and automatically updates CSS in `dist/css`   |
+| `npm run sass`   | Compile Sass files and automatically update CSS in `dist/css`     |
 | `npm run serve`  | Start local server on the `dist` folder locally to test the build |
 | `npm run deploy` | Publish the `dist` folder to GitHub Pages                         |
 
@@ -21,7 +21,7 @@ If you encounter errors during the deployment script, delete the `node_modules/.
 
 # Resources
 
-Here are some links to the resources I used.
+Here are some links to the resources I have used:
 
 - [SASS Documentation](https://sass-lang.com/documentation/)
 - [Font Awesome](https://fontawesome.com)
