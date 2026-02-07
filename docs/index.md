@@ -18,3 +18,15 @@
 # Troubleshooting
 
 If you encounter errors during the deployment script, delete the `node_modules/.cache` folder and then re-run it.
+
+# Resources
+
+Here are some links to the resources I used.
+
+- [SASS Documentation](https://sass-lang.com/documentation/)
+- [Font Awesome](https://fontawesome.com)
+- [Form Submit](https://formsubmit.co)
+- [Favicon Generator](https://favicon.io)
+- [GitHub Pages](https://pages.github.com)
+- [QR Code Generator](https://it.qr-code-generator.com)
+- [Buy me a coffee](https://www.buymeacoffee.com)
