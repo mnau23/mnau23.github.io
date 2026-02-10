@@ -9,11 +9,11 @@
 
 ## Custom
 
-| Command          | Description                                                       |
-| ---------------- | ----------------------------------------------------------------- |
-| `npm run sass`   | Compile Sass files and automatically update CSS in `dist/css`     |
-| `npm run serve`  | Start local server on the `dist` folder locally to test the build |
-| `npm run deploy` | Publish the `dist` folder to GitHub Pages                         |
+| Command          | Description                                                   |
+| ---------------- | ------------------------------------------------------------- |
+| `npm run sass`   | Compile Sass files and automatically update CSS in `dist/css` |
+| `npm run serve`  | Start local server on the `dist` folder to test the build     |
+| `npm run deploy` | Publish the `dist` folder to GitHub Pages                     |
 
 # Troubleshooting
 
