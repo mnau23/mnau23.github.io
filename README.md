@@ -1,32 +1,16 @@
+![version](https://img.shields.io/github/package-json/v/mnau23/mnau23.github.io)
+![repo-size](https://img.shields.io/github/repo-size/mnau23/mnau23.github.io?color=lightgrey)
+![last-commit](https://img.shields.io/github/last-commit/mnau23/mnau23.github.io)
+
 # Hello, World!
 
 > Source code of my personal [website](https://mnau23.github.io/).
 
-## Installation
+## 📚 Documentation
 
-First of all, compile Sass into CSS.
+See the documentation at [docs/index.md](./docs/index.md).
 
-```bash
-npm run sass
-```
+## 🧱 Tech Stack
 
-Then, publish and deploy changes on GitHub Pages website.
-
-```bash
-npm run deploy
-```
-
-## Troubleshooting
-
-If errors occur during the deploy script, delete the `node_modules/.cache` folder and then re-run it.
-
-## Resources
-
-Here are some links to the resources I used.
-
-- [Buy me a coffee](https://www.buymeacoffee.com)
-- [Favicon Generator](https://favicon.io)
-- [Font Awesome](https://fontawesome.com)
-- [Form Submit](https://formsubmit.co)
-- [GitHub Pages](https://pages.github.com)
-- [QR Code Generator](https://it.qr-code-generator.com)
+- Sass for styles
+- GitHub Pages for deployment
