@@ -7,8 +7,8 @@ updates:
     schedule:
       interval: "weekly"
     commit-message:
-      prefix: chore
-      include: scope
+      prefix: "chore"
+      include: "scope"
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-patch"]
@@ -16,4 +16,7 @@ updates:
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
-      interval: "weekly"
+      interval: "monthly"
+    commit-message:
+      prefix: "ci"
+      include: "scope"
