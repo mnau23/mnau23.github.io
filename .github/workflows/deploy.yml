@@ -28,6 +28,10 @@ jobs:
         run: npm run build:css
 
       - name: Deploy to gh-pages branch
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: npm run deploy
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          user_name: "github-actions[bot]"
+          user_email: "github-actions[bot]@users.noreply.github.com"
+          full_commit_message: "Publish site from main @ ${{ github.sha }}"
