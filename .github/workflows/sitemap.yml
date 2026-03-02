@@ -1,0 +1,45 @@
+name: Update sitemap
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: write
+
+jobs:
+  update-sitemap:
+    runs-on: ubuntu-latest
+    # skip draft PRs and those opened by bots
+    if: github.event.pull_request.draft == false && github.actor != 'dependabot[bot]' && github.actor != 'github-actions[bot]'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Generate sitemap
+        id: sitemap
+        uses: cicirello/generate-sitemap@v1
+        with:
+          base-url-path: https://emanuele.codes/
+          path-to-root: dist
+
+      - name: Format sitemap
+        run: |
+          sudo apt-get install -y libxml2-utils
+          xmllint --format dist/sitemap.xml > dist/tmp.xml
+          mv dist/tmp.xml dist/sitemap.xml
+
+      - name: Show stats
+        run: |
+          echo "File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
+          echo "Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Commit to current branch
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+          commit_message: "[action] update sitemap"
+          file_pattern: "dist/sitemap.xml"
+          commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
