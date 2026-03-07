@@ -16,6 +16,6 @@
     "sass": "1.97.3"
   },
   "devDependencies": {
-    "serve": "14.2.5"
+    "serve": "14.2.6"
   }
 }
