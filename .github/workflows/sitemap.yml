@@ -32,14 +32,20 @@ jobs:
           xmllint --format dist/sitemap.xml > dist/tmp.xml
           mv dist/tmp.xml dist/sitemap.xml
 
-      - name: Show stats
-        run: |
-          echo "File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
-          echo "Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
-
       - name: Commit to current branch
+        id: commit
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "[action] update sitemap"
           file_pattern: "dist/sitemap.xml"
           commit_author: "github-actions[bot] <github-actions[bot]@users.noreply.github.com>"
+
+      - name: Show stats
+        run: |
+          echo "📄 File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
+          echo "🌐 Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.commit.outputs.changes_detected }}" = "true" ]; then
+            echo "🔄 Sitemap is updated" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "⏸️ Sitemap is already up to date" >> $GITHUB_STEP_SUMMARY
+          fi
