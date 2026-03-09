@@ -44,8 +44,9 @@ jobs:
         run: |
           echo "File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
           echo "Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.commit.outputs.changes_detected }}" = "true" ]; then
-            echo "\nSitemap updated!" >> $GITHUB_STEP_SUMMARY
+            echo "Sitemap updated!" >> $GITHUB_STEP_SUMMARY
           else
-            echo "\nNo changes required: sitemap is already up to date." >> $GITHUB_STEP_SUMMARY
+            echo "No changes detected!" >> $GITHUB_STEP_SUMMARY
           fi
