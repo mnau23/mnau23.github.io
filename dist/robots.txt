@@ -32,9 +32,5 @@ User-agent: facebookexternalhit
 User-agent: Googlebot
 Allow: /
 
-# Block all others unlisted
-User-agent: *
-Disallow: /
-
 # Sitemap
 Sitemap: https://emanuele.codes/sitemap.xml
