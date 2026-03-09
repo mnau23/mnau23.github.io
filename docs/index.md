@@ -2,18 +2,20 @@
 
 ## General
 
-| Command                    | Description                                 |
-| -------------------------- | ------------------------------------------- |
-| `npx npm-check-updates -u` | Check for version updates in `package.json` |
-| `npm install`              | Install dependencies                        |
+| Command                    | Description                                                                                                      |
+| -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
+| `npx npm-check-updates -u` | Check for version updates in `package.json`                                                                      |
+| `npm install`              | Installs dependencies from `package.json`, may update `package-lock.json` &rarr; use for development             |
+| `npm ci`                   | (aka "clean install") Installs _exactly_ as in `package-lock.json`: faster and reproducible &rarr; use for CI/CD |
 
 ## Custom
 
-| Command          | Description                                                   |
-| ---------------- | ------------------------------------------------------------- |
-| `npm run sass`   | Compile Sass files and automatically update CSS in `dist/css` |
-| `npm run serve`  | Start local server on the `dist` folder to test the build     |
-| `npm run deploy` | Publish the `dist` folder to GitHub Pages                     |
+| Command             | Description                                               |
+| ------------------- | --------------------------------------------------------- |
+| `npm run build:css` | Compile Sass files to CSS in `dist/css`                   |
+| `npm run deploy`    | Publish the `dist` folder to GitHub Pages                 |
+| `npm run serve`     | Start local server on the `dist` folder to test the build |
+| `npm run watch`     | Watch and compile Sass files to CSS in `dist/css`         |
 
 # Troubleshooting
 
