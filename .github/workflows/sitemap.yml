@@ -42,10 +42,10 @@ jobs:
 
       - name: Show stats
         run: |
-          echo "📄 File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
-          echo "🌐 Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
+          echo "File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
+          echo "Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
           if [ "${{ steps.commit.outputs.changes_detected }}" = "true" ]; then
-            echo "🔄 Sitemap is updated" >> $GITHUB_STEP_SUMMARY
+            echo "\nSitemap updated!" >> $GITHUB_STEP_SUMMARY
           else
-            echo "⏸️ Sitemap is already up to date" >> $GITHUB_STEP_SUMMARY
+            echo "\nNo changes required: sitemap is already up to date." >> $GITHUB_STEP_SUMMARY
           fi
