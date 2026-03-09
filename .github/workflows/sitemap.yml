@@ -19,6 +19,11 @@ jobs:
           fetch-depth: 0
           ref: ${{ github.head_ref }}
 
+      - name: Debug
+        run: |
+          echo "Working dir: $(pwd)"
+          ls -la dist/
+
       - name: Generate sitemap
         id: sitemap
         uses: cicirello/generate-sitemap@v1
