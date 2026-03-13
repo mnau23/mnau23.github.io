@@ -13,7 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "gh-pages": "6.3.0",
-    "sass": "1.97.3"
+    "sass": "1.98.0"
   },
   "devDependencies": {
     "serve": "14.2.6"
