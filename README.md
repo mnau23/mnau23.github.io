@@ -8,7 +8,7 @@
 
 ## 📚 Documentation
 
-See the documentation at [docs/index.md](./docs/index.md).
+Learn more at [docs/index.md](./docs/index.md).
 
 ## 🧱 Tech Stack
 
