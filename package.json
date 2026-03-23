@@ -4,10 +4,9 @@
   "description": "My portfolio website",
   "homepage": "https://mnau23.github.io",
   "scripts": {
-    "build:css": "sass scss:dist/css",
-    "deploy": "gh-pages -d dist",
+    "build:css": "sass scss:dist/css --no-source-map",
     "serve": "serve dist",
-    "watch": "sass --watch scss:dist/css"
+    "watch": "sass scss:dist/css --watch"
   },
   "author": "mnau23",
   "license": "MIT",
