@@ -14,7 +14,7 @@ permissions: {}
 
 jobs:
   build-and-deploy:
-    name: Update sitemap
+    name: Build and deploy
     runs-on: ubuntu-latest
     permissions:
       contents: write  # required for creating a commit to a branch
