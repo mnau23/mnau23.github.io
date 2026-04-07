@@ -49,11 +49,15 @@ jobs:
 
       - name: Show stats
         run: |
-          echo "File saved at: ${{ steps.sitemap.outputs.sitemap-path }}" >> $GITHUB_STEP_SUMMARY
-          echo "Number of URLs tracked: ${{ steps.sitemap.outputs.url-count }}" >> $GITHUB_STEP_SUMMARY
+          echo "File saved at: $SITEMAP_PATH" >> $GITHUB_STEP_SUMMARY
+          echo "Number of URLs tracked: $SITEMAP_URLS" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          if [ "${{ steps.commit.outputs.changes_detected }}" = "true" ]; then
+          if [ "$SITEMAP_CHANGES" = "true" ]; then
             echo "Sitemap updated!" >> $GITHUB_STEP_SUMMARY
           else
             echo "No changes detected!" >> $GITHUB_STEP_SUMMARY
           fi
+        env:
+          SITEMAP_PATH: ${{ steps.sitemap.outputs.sitemap-path }}
+          SITEMAP_URLS: ${{ steps.sitemap.outputs.url-count }}
+          SITEMAP_CHANGES: ${{ steps.commit.outputs.changes_detected }}
