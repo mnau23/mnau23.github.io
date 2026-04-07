@@ -8,8 +8,7 @@ concurrency:
   group: pre-commit-autoupdate
   cancel-in-progress: true
 
-permissions:
-  contents: write
+permissions: {}
 
 jobs:
   update-sitemap:
@@ -17,6 +16,8 @@ jobs:
     runs-on: ubuntu-latest
     # skip draft PRs and those opened by bots
     if: github.event.pull_request.draft == false && github.actor != 'dependabot[bot]' && github.actor != 'github-actions[bot]'
+    permissions:
+      contents: write  # required for creating a commit to a branch
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2

@@ -9,14 +9,15 @@ concurrency:
   group: pre-commit-autoupdate
   cancel-in-progress: true
 
-permissions:
-  contents: write
-  pull-requests: write
+permissions: {}
 
 jobs:
   auto-update:
     name: Auto-update hooks
     runs-on: ubuntu-latest
+    permissions:
+      contents: write       # required for creating a commit to a branch
+      pull-requests: write  # required for creating/updating PR, adding labels and reviewers
     steps:
       - name: Checkout
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
