@@ -15,6 +15,7 @@ jobs:
   auto-update:
     name: Auto-update hooks
     runs-on: ubuntu-latest
+    timeout-minutes: 2
     permissions:
       contents: write       # required for creating a commit to a branch
       pull-requests: write  # required for creating/updating PR, adding labels and reviewers
