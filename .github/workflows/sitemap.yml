@@ -23,7 +23,7 @@ jobs:
 
       - name: Generate sitemap
         id: sitemap
-        uses: cicirello/generate-sitemap@v1
+        uses: cicirello/generate-sitemap@abcba11c9eb198b392608f596fd939c9fb9e3edd # v1.9.2
         with:
           base-url-path: https://emanuele.codes/
           path-to-root: dist
@@ -36,7 +36,7 @@ jobs:
 
       - name: Commit to current branch
         id: commit
-        uses: stefanzweifel/git-auto-commit-action@v7
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         with:
           commit_message: "[action] update sitemap"
           file_pattern: "dist/sitemap.xml"
