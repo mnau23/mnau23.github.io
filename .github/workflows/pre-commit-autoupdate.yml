@@ -11,6 +11,7 @@ permissions:
 
 jobs:
   auto-update:
+    name: Auto-update hooks
     runs-on: ubuntu-latest
     steps:
       - name: Checkout

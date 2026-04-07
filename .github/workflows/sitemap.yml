@@ -9,6 +9,7 @@ permissions:
 
 jobs:
   update-sitemap:
+    name: Build and deploy
     runs-on: ubuntu-latest
     # skip draft PRs and those opened by bots
     if: github.event.pull_request.draft == false && github.actor != 'dependabot[bot]' && github.actor != 'github-actions[bot]'
