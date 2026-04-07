@@ -6,6 +6,10 @@ on:
       - main
   workflow_dispatch:
 
+concurrency:
+  group: pre-commit-autoupdate
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
