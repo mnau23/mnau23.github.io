@@ -16,7 +16,7 @@ jobs:
   build-and-deploy:
     name: Build and deploy
     runs-on: ubuntu-latest
-    timeout-minutes: 10 # TODO: check
+    timeout-minutes: 2
     permissions:
       contents: write  # required for creating a commit to a branch
     steps:
