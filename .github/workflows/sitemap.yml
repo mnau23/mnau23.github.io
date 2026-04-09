@@ -5,7 +5,7 @@ on:
     types: [opened, synchronize, reopened, ready_for_review]
 
 concurrency:
-  group: pre-commit-autoupdate
+  group: update-sitemap
   cancel-in-progress: true
 
 permissions: {}
