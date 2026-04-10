@@ -42,7 +42,10 @@ jobs:
 
       - name: Configure git auth
         run: |
-          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
+          git remote set-url origin https://x-access-token:$GITHUB_TOKEN@github.com/$REPOSITORY
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
 
       - name: Commit to current branch
         id: commit
