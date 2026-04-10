@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate sitemap
         id: sitemap
-        uses: cicirello/generate-sitemap@abcba11c9eb198b392608f596fd939c9fb9e3edd # v1.9.2
+        uses: cicirello/generate-sitemap@6a56a20238e631d653600cf792c3596722b78259 # v1.10.4
         with:
           base-url-path: https://emanuele.codes/
           path-to-root: dist
