@@ -50,7 +50,7 @@
 .menu-nav {
   margin: 0;
   padding: 0;
-  background: rgb(43.1351351351, 42.3648648649, 42.3648648649);
+  background: rgb(16.9157392687%, 16.613672496%, 16.613672496%);
   list-style: none;
   transform: translate3d(0, -100%, 0);
   transition: all 0.5s ease-out;
@@ -156,7 +156,7 @@ h1.lg-heading, h2.lg-heading, h3.lg-heading {
 h1.sm-heading, h2.sm-heading, h3.sm-heading {
   margin-bottom: 2rem;
   padding: 0.2rem 1rem;
-  background: rgba(61.1459459459, 60.0540540541, 60.0540540541, 0.5);
+  background: rgba(23.9788023317%, 23.550609433%, 23.550609433%, 0.5);
 }
 
 a {
@@ -274,7 +274,7 @@ main#home h1 {
   grid-gap: 30px;
 }
 .more .edu-cert .uni .edu {
-  background: rgb(68.8648648649, 67.6351351351, 67.6351351351);
+  background: rgb(27.0058293588%, 26.5235824059%, 26.5235824059%);
   padding: 0.5rem;
   border-bottom: 5px solid rgba(107, 159, 238, 0.9058823529);
 }
@@ -312,7 +312,7 @@ main#home h1 {
 .container .contact-info .infobox .icon {
   min-width: 60px;
   height: 60px;
-  background: rgb(94.5945945946, 92.9054054054, 92.9054054054);
+  background: rgb(37.0959194489%, 36.4334923158%, 36.4334923158%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -338,7 +338,7 @@ main#home h1 {
   width: 60%;
   height: 450px;
   padding: 30px;
-  background: rgb(68.8648648649, 67.6351351351, 67.6351351351);
+  background: rgb(27.0058293588%, 26.5235824059%, 26.5235824059%);
   border-bottom: 5px solid rgba(107, 159, 238, 0.9058823529);
 }
 .container .contact-form h2 {
@@ -412,7 +412,7 @@ main#home h1 {
 }
 
 .btn-light, .btn-light-round, .btn-light-round-thx, .btn-light-round-edu, .btn-light-round-cv {
-  background: rgb(183.6486486486, 182.3513513514, 182.3513513514);
+  background: rgb(72.0190779014%, 71.5103338633%, 71.5103338633%);
   color: #333;
 }
 
@@ -522,7 +522,7 @@ main#home h1 {
 #main-footer {
   text-align: center;
   padding: 1rem;
-  background: rgb(30.2702702703, 29.7297297297, 29.7297297297);
+  background: rgb(11.8706942236%, 11.6587175411%, 11.6587175411%);
   color: #fff;
   height: 90px;
 }
