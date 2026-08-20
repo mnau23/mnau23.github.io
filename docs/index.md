@@ -16,7 +16,7 @@
 | `npm run serve`     | Start local server on the `dist` folder to test the build |
 | `npm run watch`     | Watch and compile Sass files to CSS in `dist/css`         |
 
-Deployment to GitHub Pages is managed automatically by the workflow in `.github/workflows/deploy.yml` when changes are pushed to `main`.
+**Note**: initially there was also a `npm run deploy` for deploying to GitHub Pages. Now, it is managed automatically by the workflow in `.github/workflows/deploy.yml` when changes are pushed to `main`.
 
 # Resources
 
