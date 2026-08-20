@@ -13,13 +13,10 @@
 | Command             | Description                                               |
 | ------------------- | --------------------------------------------------------- |
 | `npm run build:css` | Compile Sass files to CSS in `dist/css`                   |
-| `npm run deploy`    | Publish the `dist` folder to GitHub Pages                 |
 | `npm run serve`     | Start local server on the `dist` folder to test the build |
 | `npm run watch`     | Watch and compile Sass files to CSS in `dist/css`         |
 
-# Troubleshooting
-
-If you encounter errors during the deployment script, delete the `node_modules/.cache` folder and then re-run it.
+Deployment to GitHub Pages is managed automatically by the workflow in `.github/workflows/deploy.yml` when changes are pushed to `main`.
 
 # Resources
 
