@@ -45,7 +45,26 @@ document.addEventListener('DOMContentLoaded', init);
 
 function init() {
     const txtElement = document.querySelector('.txt-type');
-    const words = JSON.parse(txtElement.getAttribute('data-words'));
+    if (!txtElement) {
+        return;
+    }
+
+    const wordsAttr = txtElement.getAttribute('data-words');
+    if (!wordsAttr) {
+        return;
+    }
+
+    let words = [];
+    try {
+        words = JSON.parse(wordsAttr);
+    } catch {
+        return;
+    }
+
+    if (!Array.isArray(words) || words.length === 0) {
+        return;
+    }
+
     const wait = txtElement.getAttribute('data-wait');
     new typeWriter(txtElement, words, wait);  // Init typewriter
 }
