@@ -486,8 +486,12 @@
             This website is cookie-free! <i class="fa fa-cookie-bite"></i><br>
             Made with <i class="fa fa-heart"></i> and <i class="fa fa-code"></i> by me &copy;
             2021
+            <span id="year-range"></span>
             <script>
-                new Date().getFullYear() > 2021 && document.write(" - " + new Date().getFullYear())
+                const currentYear = new Date().getFullYear();
+                if (currentYear > 2021) {
+                    document.getElementById('year-range').textContent = ` - ${currentYear}`;
+                }
             </script>
         </div>
     </footer>
