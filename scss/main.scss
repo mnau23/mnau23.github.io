@@ -123,7 +123,7 @@ main {
             position: relative;
             font-weight: 900;
             &::before {
-                content: attr(percentage);
+                content: attr(data-percentage);
                 position: absolute;
                 padding: 4px 6px;
                 background-color: config.set-text-color(config.$primary-color);  //black;

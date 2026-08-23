@@ -241,7 +241,7 @@ main#home h1 {
   font-weight: 900;
 }
 .more .skills .skill-per::before {
-  content: attr(percentage);
+  content: attr(data-percentage);
   position: absolute;
   padding: 4px 6px;
   background-color: #fff;
@@ -364,7 +364,9 @@ main#home h1 {
   outline: none;
   resize: none;
 }
-.container .contact-form .input-box input:focus ~ span, .container .contact-form .input-box input:valid ~ span, .container .contact-form .input-box textarea:focus ~ span, .container .contact-form .input-box textarea:valid ~ span {
+.container .contact-form .input-box input:focus ~ span, .container .contact-form .input-box input:valid ~ span,
+.container .contact-form .input-box textarea:focus ~ span,
+.container .contact-form .input-box textarea:valid ~ span {
   color: rgba(107, 159, 238, 0.9058823529);
   font-size: 12px;
   transform: translateY(-25px);
@@ -793,5 +795,3 @@ main#home h1 {
     text-align: center;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
