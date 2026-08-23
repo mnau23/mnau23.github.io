@@ -222,7 +222,7 @@ main {
     }
     .contact-form {
         width: 60%;
-        height: 450px;
+        min-height: 450px;
         padding: 30px;
         background: color.change(config.$primary-color, $lightness: color.channel(config.$primary-color, "lightness", $space: hsl) + 5);
         border-bottom: 5px solid config.$secondary-color;

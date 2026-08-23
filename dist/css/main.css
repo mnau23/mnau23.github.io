@@ -336,7 +336,7 @@ main#home h1 {
 }
 .container .contact-form {
   width: 60%;
-  height: 450px;
+  min-height: 450px;
   padding: 30px;
   background: rgb(27.0058293588%, 26.5235824059%, 26.5235824059%);
   border-bottom: 5px solid rgba(107, 159, 238, 0.9058823529);
