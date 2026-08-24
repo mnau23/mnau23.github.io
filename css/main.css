@@ -336,7 +336,7 @@ main#home h1 {
 }
 .container .contact-form {
   width: 60%;
-  height: 450px;
+  min-height: 450px;
   padding: 30px;
   background: rgb(27.0058293588%, 26.5235824059%, 26.5235824059%);
   border-bottom: 5px solid rgba(107, 159, 238, 0.9058823529);
@@ -350,7 +350,8 @@ main#home h1 {
   width: 100%;
   margin-top: 10px;
 }
-.container .contact-form .input-box input {
+.container .contact-form .input-box input,
+.container .contact-form .input-box textarea {
   width: 100%;
   height: 35px;
   padding: 5px 0;
@@ -363,10 +364,16 @@ main#home h1 {
   outline: none;
   resize: none;
 }
-.container .contact-form .input-box input:focus ~ span, .container .contact-form .input-box input:valid ~ span {
+.container .contact-form .input-box input:focus ~ span, .container .contact-form .input-box input:valid ~ span,
+.container .contact-form .input-box textarea:focus ~ span,
+.container .contact-form .input-box textarea:valid ~ span {
   color: rgba(107, 159, 238, 0.9058823529);
   font-size: 12px;
   transform: translateY(-25px);
+}
+.container .contact-form .input-box textarea {
+  min-height: 120px;
+  padding-top: 10px;
 }
 .container .contact-form .input-box span {
   position: absolute;
