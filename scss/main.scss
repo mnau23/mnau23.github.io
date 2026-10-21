@@ -247,7 +247,7 @@ main {
                 color: config.set-text-color(config.$secondary-color);
                 outline: none;
                 resize: none;
-                &:focus ~ span, &:valid ~ span {
+                &:focus ~ label, &:valid ~ label {
                     color: config.$secondary-color;
                     font-size: 12px;
                     transform: translateY(-25px);
@@ -257,7 +257,7 @@ main {
                 min-height: 120px;
                 padding-top: 10px;
             }
-            span {
+            label {
                 position: absolute;
                 left: 0;
                 padding: 5px 0;

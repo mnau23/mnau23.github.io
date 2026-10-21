@@ -364,9 +364,9 @@ main#home h1 {
   outline: none;
   resize: none;
 }
-.container .contact-form .input-box input:focus ~ span, .container .contact-form .input-box input:valid ~ span,
-.container .contact-form .input-box textarea:focus ~ span,
-.container .contact-form .input-box textarea:valid ~ span {
+.container .contact-form .input-box input:focus ~ label, .container .contact-form .input-box input:valid ~ label,
+.container .contact-form .input-box textarea:focus ~ label,
+.container .contact-form .input-box textarea:valid ~ label {
   color: rgba(107, 159, 238, 0.9058823529);
   font-size: 12px;
   transform: translateY(-25px);
@@ -375,7 +375,7 @@ main#home h1 {
   min-height: 120px;
   padding-top: 10px;
 }
-.container .contact-form .input-box span {
+.container .contact-form .input-box label {
   position: absolute;
   left: 0;
   padding: 5px 0;
