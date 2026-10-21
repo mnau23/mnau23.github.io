@@ -17,6 +17,15 @@ function findHtmlFiles(directory) {
     });
 }
 
+const defaults = {};
+
+if (process.env.CI === 'true') {
+    defaults.chromeLaunchConfig = {
+        args: ['--no-sandbox']
+    };
+}
+
 module.exports = {
+    defaults,
     urls: findHtmlFiles(path.join(__dirname, 'dist'))
 };
