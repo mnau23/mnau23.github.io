@@ -364,8 +364,12 @@ main#home h1 {
   border-bottom: 2px solid rgba(107, 159, 238, 0.9058823529);
   background-color: #c5c5c5;
   color: #000;
-  outline: none;
   resize: none;
+}
+.container .contact-form .input-box input:focus-visible,
+.container .contact-form .input-box textarea:focus-visible {
+  outline: 2px solid rgba(107, 159, 238, 0.9058823529);
+  outline-offset: 2px;
 }
 .container .contact-form .input-box input:focus ~ label, .container .contact-form .input-box input:valid ~ label,
 .container .contact-form .input-box textarea:focus ~ label,

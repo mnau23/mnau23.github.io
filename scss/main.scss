@@ -245,8 +245,11 @@ main {
                 border-bottom: 2px solid config.$secondary-color;
                 background-color: #c5c5c5;
                 color: config.set-text-color(config.$secondary-color);
-                outline: none;
                 resize: none;
+                &:focus-visible {
+                    outline: 2px solid config.$secondary-color;
+                    outline-offset: 2px;
+                }
                 &:focus ~ label, &:valid ~ label {
                     color: config.$secondary-color;
                     font-size: 12px;
