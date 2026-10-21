@@ -85,8 +85,9 @@
                 </div>
                 <div class="skill">
                     <div class="skill-name">LOLCODE
-                        <a href="#!" data-modal-target="#modal-lol"><i class="fas fa-info-circle"></i></a>
-                        <!--Button-->
+                        <button type="button" class="modal-trigger" data-modal-target="#modal-lol" aria-label="More information about LOLCODE">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        </button>
                     </div>
                     <div class="skill-bar">
                         <div class="skill-per" percentage="1"></div>
@@ -140,9 +141,9 @@
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-sdu" class="btn-light-round-edu">
+                            <button type="button" data-modal-target="#modal-sdu" class="btn-light-round-edu">
                                 <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -158,9 +159,9 @@
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-ttu" class="btn-light-round-edu">
+                            <button type="button" data-modal-target="#modal-ttu" class="btn-light-round-edu">
                                 <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -176,9 +177,9 @@
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-msc" class="btn-light-round-edu">
+                            <button type="button" data-modal-target="#modal-msc" class="btn-light-round-edu">
                                 <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -194,9 +195,9 @@
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-bsc" class="btn-light-round-edu">
+                            <button type="button" data-modal-target="#modal-bsc" class="btn-light-round-edu">
                                 <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            </button>
                         </div>
                     </div>
 
@@ -261,23 +262,21 @@
         </div>
     </main>
 
-    <div class="modal" id="modal-lol">
+    <dialog class="modal" id="modal-lol" aria-labelledby="modal-lol-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">LOLCODE</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-lol-title">LOLCODE</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             Working on it. <i class="fas fa-grin-tears"></i><br>
             More info <a href="https://en.wikipedia.org/wiki/LOLCODE" target="_blank" rel="noopener noreferrer">here.</a>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-sdu">
+    <dialog class="modal" id="modal-sdu" aria-labelledby="modal-sdu-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Syddansk Universitet</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-sdu-title">Syddansk Universitet</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
@@ -286,13 +285,12 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-ttu">
+    <dialog class="modal" id="modal-ttu" aria-labelledby="modal-ttu-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Tallinna Tehnikaülikool</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-ttu-title">Tallinna Tehnikaülikool</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
@@ -319,13 +317,12 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-msc">
+    <dialog class="modal" id="modal-msc" aria-labelledby="modal-msc-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Università degli Studi di Bergamo</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-msc-title">Università degli Studi di Bergamo</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
@@ -369,13 +366,12 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-bsc">
+    <dialog class="modal" id="modal-bsc" aria-labelledby="modal-bsc-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Università degli Studi di Bergamo</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-bsc-title">Università degli Studi di Bergamo</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
@@ -457,9 +453,7 @@
                 </li>
             </ul>
         </div>
-    </div>
-
-    <div id="overlay"></div>
+    </dialog>
 
     <footer id="main-footer">
         <div class="icons">

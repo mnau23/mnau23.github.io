@@ -65,26 +65,23 @@
                     I am open to any suggestions and improvements.
                     <i class="fas fa-smile-beam"></i>
                 </p>
-                <a href="#!" data-modal-target="#modal-cv" class="btn-light-round-cv">
+                <button type="button" data-modal-target="#modal-cv" class="btn-light-round-cv">
                     <i class="fas fa-paperclip"></i> Get my CV!
-                </a>
+                </button>
             </div>
         </div>
     </main>
 
-    <div class="modal" id="modal-cv">
+    <dialog class="modal" id="modal-cv" aria-labelledby="modal-cv-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Curriculum Vitae</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-cv-title">Curriculum Vitae</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             To be released asap.<br>
             Contact me if you want a pre-release version.
         </div>
-    </div>
-
-    <div id="overlay"></div>
+    </dialog>
 
     <footer id="main-footer">
         <div class="icons">
