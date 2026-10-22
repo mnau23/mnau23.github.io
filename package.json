@@ -1,11 +1,12 @@
 {
   "name": "portfolio",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "My portfolio website",
   "homepage": "https://mnau23.github.io",
   "scripts": {
     "build:css": "sass scss:dist/css --no-source-map",
     "serve": "serve dist",
+    "test:a11y": "npm run build:css && pa11y-ci",
     "watch": "sass scss:dist/css --watch"
   },
   "author": "mnau23",
@@ -14,6 +15,7 @@
     "sass": "1.105.0"
   },
   "devDependencies": {
+    "pa11y-ci": "5.0.0",
     "serve": "14.2.6"
   }
 }

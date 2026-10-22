@@ -18,13 +18,13 @@
 
 <body>
     <header>
-        <div class="menu-btn">
+        <button type="button" class="menu-btn" aria-label="Toggle navigation menu" aria-controls="site-menu" aria-expanded="false">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
             <div class="btn-line"></div>
-        </div>
+        </button>
 
-        <nav class="menu">
+        <nav class="menu" id="site-menu">
             <div class="menu-photo">
                 <div class="portrait"></div>
             </div>
@@ -53,73 +53,74 @@
             <div class="skills">
                 <h1>Programming <span class="text-secondary">skills</span></h1>
                 <div class="skill">
-                    <div class="skill-name">C/C++ <i class="fas fa-file-code"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="80"></div>
+                    <div class="skill-name">C/C++ <i class="fas fa-file-code" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="C/C++ skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-valuetext="80 percent">
+                        <div class="skill-per" percentage="80" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">Haskell <i class="fas fa-file-code"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="50"></div>
+                    <div class="skill-name">Haskell <i class="fas fa-file-code" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="Haskell skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent">
+                        <div class="skill-per" percentage="50" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">HTML <i class="fab fa-html5"></i> & CSS <i class="fab fa-css3-alt"></i>
+                    <div class="skill-name">HTML <i class="fab fa-html5" aria-hidden="true"></i> & CSS <i class="fab fa-css3-alt" aria-hidden="true"></i>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="90"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">Java <i class="fab fa-java"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="80"></div>
+                    <div class="skill-bar" role="meter" aria-label="HTML and CSS skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="90" aria-valuetext="90 percent">
+                        <div class="skill-per" percentage="90" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">JavaScript <i class="fab fa-js-square"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="70"></div>
+                    <div class="skill-name">Java <i class="fab fa-java" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="Java skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="80" aria-valuetext="80 percent">
+                        <div class="skill-per" percentage="80" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">JavaScript <i class="fab fa-js-square" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="JavaScript skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" aria-valuetext="70 percent">
+                        <div class="skill-per" percentage="70" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
                     <div class="skill-name">LOLCODE
-                        <a href="#!" data-modal-target="#modal-lol"><i class="fas fa-info-circle"></i></a>
-                        <!--Button-->
+                        <button type="button" class="modal-trigger" data-modal-target="#modal-lol" aria-label="More information about LOLCODE">
+                            <i class="fas fa-info-circle" aria-hidden="true"></i>
+                        </button>
                     </div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="1"></div>
-                    </div>
-                </div>
-                <div class="skill">
-                    <div class="skill-name">MATLAB <i class="fas fa-file-code"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="60"></div>
+                    <div class="skill-bar" role="meter" aria-label="LOLCODE skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="1" aria-valuetext="1 percent">
+                        <div class="skill-per" percentage="1" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">PHP <i class="fab fa-php"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="30"></div>
+                    <div class="skill-name">MATLAB <i class="fas fa-file-code" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="MATLAB skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" aria-valuetext="60 percent">
+                        <div class="skill-per" percentage="60" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">Python <i class="fab fa-python"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="70"></div>
+                    <div class="skill-name">PHP <i class="fab fa-php" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="PHP skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="30" aria-valuetext="30 percent">
+                        <div class="skill-per" percentage="30" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">Scala <i class="fas fa-file-code"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="50"></div>
+                    <div class="skill-name">Python <i class="fab fa-python" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="Python skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="70" aria-valuetext="70 percent">
+                        <div class="skill-per" percentage="70" aria-hidden="true"></div>
                     </div>
                 </div>
                 <div class="skill">
-                    <div class="skill-name">SQL <i class="fas fa-file-code"></i></div>
-                    <div class="skill-bar">
-                        <div class="skill-per" percentage="60"></div>
+                    <div class="skill-name">Scala <i class="fas fa-file-code" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="Scala skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" aria-valuetext="50 percent">
+                        <div class="skill-per" percentage="50" aria-hidden="true"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-name">SQL <i class="fas fa-file-code" aria-hidden="true"></i></div>
+                    <div class="skill-bar" role="meter" aria-label="SQL skill level" aria-valuemin="0" aria-valuemax="100" aria-valuenow="60" aria-valuetext="60 percent">
+                        <div class="skill-per" percentage="60" aria-hidden="true"></div>
                     </div>
                 </div>
             </div>
@@ -132,17 +133,17 @@
                         <h3>Summer school (Master's degree)</h3>
                         <div class="edu-info">
                             <p>
-                                <i class="fas fa-university"></i>
+                                <i class="fas fa-university" aria-hidden="true"></i>
                                 <a href="https://www.sdu.dk/en/" target="_blank" rel="noopener noreferrer">
                                     Syddansk Universitet (SDU)</a><br>
-                                <i class="fas fa-map-marker-alt"></i> Odense, Denmark<br>
-                                <i class="fas fa-calendar-alt"></i> Aug. 2021
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Odense, Denmark<br>
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i> Aug. 2021
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-sdu" class="btn-light-round-edu">
-                                <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            <button type="button" data-modal-target="#modal-sdu" class="btn-light-round-edu">
+                                <i class="fas fa-book" aria-hidden="true"></i> Check exams!
+                            </button>
                         </div>
                     </div>
 
@@ -150,17 +151,17 @@
                         <h3>Erasmus semester (Master's degree)</h3>
                         <div class="edu-info">
                             <p>
-                                <i class="fas fa-university"></i>
+                                <i class="fas fa-university" aria-hidden="true"></i>
                                 <a href="https://www.taltech.ee/en/" target="_blank" rel="noopener noreferrer">
                                     Tallinna Tehnikaülikool (TalTech)</a><br>
-                                <i class="fas fa-map-marker-alt"></i> Tallinn, Estonia<br>
-                                <i class="fas fa-calendar-alt"></i> Aug. 2020 - Jan. 2021
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Tallinn, Estonia<br>
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i> Aug. 2020 - Jan. 2021
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-ttu" class="btn-light-round-edu">
-                                <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            <button type="button" data-modal-target="#modal-ttu" class="btn-light-round-edu">
+                                <i class="fas fa-book" aria-hidden="true"></i> Check exams!
+                            </button>
                         </div>
                     </div>
 
@@ -168,17 +169,17 @@
                         <h3>Computer Science Engineering (Master's degree)</h3>
                         <div class="edu-info">
                             <p>
-                                <i class="fas fa-university"></i>
+                                <i class="fas fa-university" aria-hidden="true"></i>
                                 <a href="https://ls-ii.unibg.it/it" target="_blank" rel="noopener noreferrer">
                                     Università degli Studi di Bergamo (UniBg)</a><br>
-                                <i class="fas fa-map-marker-alt"></i> Dalmine (BG), Italy<br>
-                                <i class="fas fa-calendar-alt"></i> Oct. 2019 - Mar. 2022
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dalmine (BG), Italy<br>
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i> Oct. 2019 - Mar. 2022
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-msc" class="btn-light-round-edu">
-                                <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            <button type="button" data-modal-target="#modal-msc" class="btn-light-round-edu">
+                                <i class="fas fa-book" aria-hidden="true"></i> Check exams!
+                            </button>
                         </div>
                     </div>
 
@@ -186,28 +187,28 @@
                         <h3>Computer Science Engineering (Bachelor's degree)</h3>
                         <div class="edu-info">
                             <p>
-                                <i class="fas fa-university"></i>
+                                <i class="fas fa-university" aria-hidden="true"></i>
                                 <a href="https://lt-ii.unibg.it/it" target="_blank" rel="noopener noreferrer">
                                     Università degli Studi di Bergamo (UniBg)</a><br>
-                                <i class="fas fa-map-marker-alt"></i> Dalmine (BG), Italy<br>
-                                <i class="fas fa-calendar-alt"></i> Sep. 2016 - Dec. 2019
+                                <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Dalmine (BG), Italy<br>
+                                <i class="fas fa-calendar-alt" aria-hidden="true"></i> Sep. 2016 - Dec. 2019
                             </p>
                         </div>
                         <div class="edu-exams">
-                            <a href="#!" data-modal-target="#modal-bsc" class="btn-light-round-edu">
-                                <i class="fas fa-book"></i> Check exams!
-                            </a>
+                            <button type="button" data-modal-target="#modal-bsc" class="btn-light-round-edu">
+                                <i class="fas fa-book" aria-hidden="true"></i> Check exams!
+                            </button>
                         </div>
                     </div>
 
                     <div class="edu">
                         <h3>High school (Scientific studies)</h3>
                         <p>
-                            <i class="fas fa-university"></i>
+                            <i class="fas fa-university" aria-hidden="true"></i>
                             <a href="https://www.maironidaponte.edu.it/index.php" target="_blank" rel="noopener noreferrer">
                                 ISISS Giovanni Maironi da Ponte</a><br>
-                            <i class="fas fa-map-marker-alt"></i> Presezzo (BG), Italy<br>
-                            <i class="fas fa-calendar-alt"></i> Sep. 2011 - Jul. 2016<br>
+                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i> Presezzo (BG), Italy<br>
+                            <i class="fas fa-calendar-alt" aria-hidden="true"></i> Sep. 2011 - Jul. 2016<br>
                         </p>
                     </div>
                 </div>
@@ -261,230 +262,223 @@
         </div>
     </main>
 
-    <div class="modal" id="modal-lol">
+    <dialog class="modal" id="modal-lol" aria-labelledby="modal-lol-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">LOLCODE</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-lol-title">LOLCODE</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
-            Working on it. <i class="fas fa-grin-tears"></i><br>
+            Working on it. <i class="fas fa-grin-tears" aria-hidden="true"></i><br>
             More info <a href="https://en.wikipedia.org/wiki/LOLCODE" target="_blank" rel="noopener noreferrer">here.</a>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-sdu">
+    <dialog class="modal" id="modal-sdu" aria-labelledby="modal-sdu-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Syddansk Universitet</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-sdu-title">Syddansk Universitet</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Continuous Delivery and DevOps
+                    <i class="fas fa-check" aria-hidden="true"></i> Continuous Delivery and DevOps
                 </li>
             </ul>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-ttu">
+    <dialog class="modal" id="modal-ttu" aria-labelledby="modal-ttu-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Tallinna Tehnikaülikool</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-ttu-title">Tallinna Tehnikaülikool</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Academic Communication in English
+                    <i class="fas fa-check" aria-hidden="true"></i> Academic Communication in English
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Analysis of Programming Languages
+                    <i class="fas fa-check" aria-hidden="true"></i> Analysis of Programming Languages
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Cyber Security Management
+                    <i class="fas fa-check" aria-hidden="true"></i> Cyber Security Management
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Functional Programming
+                    <i class="fas fa-check" aria-hidden="true"></i> Functional Programming
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Intensive course in Estonian language and culture
+                    <i class="fas fa-check" aria-hidden="true"></i> Intensive course in Estonian language and culture
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Software Quality and Standards
+                    <i class="fas fa-check" aria-hidden="true"></i> Software Quality and Standards
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> System Aspects in Communications
+                    <i class="fas fa-check" aria-hidden="true"></i> System Aspects in Communications
                 </li>
             </ul>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-msc">
+    <dialog class="modal" id="modal-msc" aria-labelledby="modal-msc-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Università degli Studi di Bergamo</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-msc-title">Università degli Studi di Bergamo</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Artificial Intelligence
+                    <i class="fas fa-check" aria-hidden="true"></i> Artificial Intelligence
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Automatic Controls
+                    <i class="fas fa-check" aria-hidden="true"></i> Automatic Controls
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Business Management
+                    <i class="fas fa-check" aria-hidden="true"></i> Business Management
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Computer Science III A (ASM, C/C++, Java, Scala Programming)
+                    <i class="fas fa-check" aria-hidden="true"></i> Computer Science III A (ASM, C/C++, Java, Scala Programming)
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Computer Science III B (Design and Algorithms)
+                    <i class="fas fa-check" aria-hidden="true"></i> Computer Science III B (Design and Algorithms)
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Identification of Models and Data Analysis
+                    <i class="fas fa-check" aria-hidden="true"></i> Identification of Models and Data Analysis
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Optimization Models and Algorithms
+                    <i class="fas fa-check" aria-hidden="true"></i> Optimization Models and Algorithms
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Theoretical Computer Science
+                    <i class="fas fa-check" aria-hidden="true"></i> Theoretical Computer Science
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Telecommunication Networks
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <i class="fas fa-check"></i> Robotics
+                    <i class="fas fa-check" aria-hidden="true"></i> Telecommunication Networks
                 </li>
             </ul>
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Master's Thesis - <i>Analysis and evaluation
+                    <i class="fas fa-check" aria-hidden="true"></i> Robotics
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Master's Thesis - <i>Analysis and evaluation
                         of encrypted systems for data management on the cloud</i>
                 </li>
             </ul>
         </div>
-    </div>
+    </dialog>
 
-    <div class="modal" id="modal-bsc">
+    <dialog class="modal" id="modal-bsc" aria-labelledby="modal-bsc-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Università degli Studi di Bergamo</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-bsc-title">Università degli Studi di Bergamo</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Calculus I
+                    <i class="fas fa-check" aria-hidden="true"></i> Calculus I
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Chemistry
+                    <i class="fas fa-check" aria-hidden="true"></i> Chemistry
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Geometry and Linear Algebra
+                    <i class="fas fa-check" aria-hidden="true"></i> Geometry and Linear Algebra
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Computer Science I (Computer Architectures<br>& C Programming)
+                    <i class="fas fa-check" aria-hidden="true"></i> Computer Science I (Computer Architectures<br>& C Programming)
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Computer Science II (Operating Systems<br>& Java Programming)
+                    <i class="fas fa-check" aria-hidden="true"></i> Computer Science II (Operating Systems<br>& Java Programming)
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Physics I & II
-                </li>
-            </ul>
-            <ul>
-                <li>
-                    <i class="fas fa-check"></i> Business Economics and Organization
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Calculus II
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Database and Web
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Electrical Engineering
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Fundamentals of Control System
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Fundamentals of Electronics
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Fundamentals of Networks and Telecommunications
-                </li>
-                <li>
-                    <i class="fas fa-check"></i> Statistics I & II (Stochastic Models)
+                    <i class="fas fa-check" aria-hidden="true"></i> Physics I & II
                 </li>
             </ul>
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Accounting Systems
+                    <i class="fas fa-check" aria-hidden="true"></i> Business Economics and Organization
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Algebra and Logic
+                    <i class="fas fa-check" aria-hidden="true"></i> Calculus II
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Database Technology
+                    <i class="fas fa-check" aria-hidden="true"></i> Database and Web
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Industrial Automation
+                    <i class="fas fa-check" aria-hidden="true"></i> Electrical Engineering
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Industrial Production Management
+                    <i class="fas fa-check" aria-hidden="true"></i> Fundamentals of Control System
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Multimedia Networking
+                    <i class="fas fa-check" aria-hidden="true"></i> Fundamentals of Electronics
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Real-time Systems
+                    <i class="fas fa-check" aria-hidden="true"></i> Fundamentals of Networks and Telecommunications
                 </li>
                 <li>
-                    <i class="fas fa-check"></i> Software Engineering
+                    <i class="fas fa-check" aria-hidden="true"></i> Statistics I & II (Stochastic Models)
                 </li>
             </ul>
             <ul>
                 <li>
-                    <i class="fas fa-check"></i> Bachelor's Thesis - <i>A graphical notation for MSL:
+                    <i class="fas fa-check" aria-hidden="true"></i> Accounting Systems
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Algebra and Logic
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Database Technology
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Industrial Automation
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Industrial Production Management
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Multimedia Networking
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Real-time Systems
+                </li>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Software Engineering
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <i class="fas fa-check" aria-hidden="true"></i> Bachelor's Thesis - <i>A graphical notation for MSL:
                         a pattern-oriented modeling language for self-adaptive software architectures</i>
                 </li>
             </ul>
         </div>
-    </div>
-
-    <div id="overlay"></div>
+    </dialog>
 
     <footer id="main-footer">
         <div class="icons">
-            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile (opens in a new tab)">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-hackerrank"></i>
+            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="HackerRank profile (opens in a new tab)">
+                <i class="fab fa-hackerrank" aria-hidden="true"></i>
             </a>
-            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i>
+            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer" aria-label="Telegram profile (opens in a new tab)">
+                <i class="fab fa-telegram" aria-hidden="true"></i>
             </a>
-            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-envelope"></i>
+            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer" aria-label="Send me an email (opens in a new tab)">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
         <div class="copyright">
-            This website is cookie-free! <i class="fa fa-cookie-bite"></i><br>
-            Made with <i class="fa fa-heart"></i> and <i class="fa fa-code"></i> by me &copy;
+            This website is cookie-free! <i class="fa fa-cookie-bite" aria-hidden="true"></i><br>
+            Made with <span class="visually-hidden">love</span><i class="fa fa-heart" aria-hidden="true"></i> and <span class="visually-hidden">code</span><i class="fa fa-code" aria-hidden="true"></i> by me &copy;
             2021
             <span id="year-range"></span>
             <script>

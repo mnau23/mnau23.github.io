@@ -7,6 +7,9 @@
     z-index: 3;
     right: 35px;
     top: 35px;
+    padding: 0;
+    border: 0;
+    background: transparent;
     cursor: pointer;
     @include config.easeOut;
     .btn-line {
