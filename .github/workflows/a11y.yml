@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 concurrency:
-  group: pa11y-${{ github.event.pull_request.number || github.ref }}
+  group: accessibility-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 permissions: {}
