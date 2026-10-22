@@ -4,7 +4,7 @@
 
 | Command                    | Description                                                                                                      |
 | -------------------------- | ---------------------------------------------------------------------------------------------------------------- |
-| `npx npm-check-updates -u` | Check for version updates in `package.json`                                                                      |
+| `npx npm-check-updates -u` | Update dependency version ranges in `package.json`                                                               |
 | `npm install`              | Installs dependencies from `package.json`, may update `package-lock.json` &rarr; use for development             |
 | `npm ci`                   | (aka "clean install") Installs _exactly_ as in `package-lock.json`: faster and reproducible &rarr; use for CI/CD |
 
@@ -14,9 +14,10 @@
 | ------------------- | --------------------------------------------------------- |
 | `npm run build:css` | Compile Sass files to CSS in `dist/css`                   |
 | `npm run serve`     | Start local server on the `dist` folder to test the build |
+| `npm run test:a11y` | Build the CSS and run the accessibility checks            |
 | `npm run watch`     | Watch and compile Sass files to CSS in `dist/css`         |
 
-**Note**: initially there was also a `npm run deploy` for deploying to GitHub Pages. Now, it is managed automatically by the workflow in `.github/workflows/deploy.yml` when changes are pushed to `main`.
+**Note**: initially there was also a `npm run deploy` for deploying to GitHub Pages. Deployment is now managed by the workflow in `.github/workflows/deploy.yml`, which runs when changes are pushed to `main` or when manually triggered.
 
 # Resources
 
