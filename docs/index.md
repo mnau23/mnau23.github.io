@@ -29,3 +29,8 @@ Here are some links to the resources I have used:
 - [GitHub Pages](https://pages.github.com)
 - [QR Code Generator](https://it.qr-code-generator.com)
 - [Buy me a coffee](https://www.buymeacoffee.com)
+- Accessibility:
+  - PageSpeed Insights (Lighthouse): https://pagespeed.web.dev/
+  - WAVE: https://wave.webaim.org/
+  - Contrast Checker: https://webaim.org/resources/contrastchecker/
+  - AXE DevTools (browser extension)
