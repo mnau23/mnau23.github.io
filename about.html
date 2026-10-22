@@ -15,13 +15,13 @@
 
 <body>
     <header>
-        <div class="menu-btn">
+        <button type="button" class="menu-btn" aria-label="Toggle navigation menu" aria-controls="site-menu" aria-expanded="false">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
             <div class="btn-line"></div>
-        </div>
+        </button>
 
-        <nav class="menu">
+        <nav class="menu" id="site-menu">
             <div class="menu-photo">
                 <div class="portrait"></div>
             </div>
@@ -63,53 +63,50 @@
                     website's source code on my GitHub account: click
                     <a href="https://github.com/mnau23/mnau23.github.io">here</a>.<br>
                     I am open to any suggestions and improvements.
-                    <i class="fas fa-smile-beam"></i>
+                    <i class="fas fa-smile-beam" aria-hidden="true"></i>
                 </p>
-                <a href="#!" data-modal-target="#modal-cv" class="btn-light-round-cv">
-                    <i class="fas fa-paperclip"></i> Get my CV!
-                </a>
+                <button type="button" data-modal-target="#modal-cv" class="btn-light-round-cv">
+                    <i class="fas fa-paperclip" aria-hidden="true"></i> Get my CV!
+                </button>
             </div>
         </div>
     </main>
 
-    <div class="modal" id="modal-cv">
+    <dialog class="modal" id="modal-cv" aria-labelledby="modal-cv-title" tabindex="-1">
         <div class="modal-header">
-            <div class="title">Curriculum Vitae</div>
-            <a href="#!" data-close-btn class="close-btn">&times;</a>
-            <!--Button-->
+            <div class="title" id="modal-cv-title">Curriculum Vitae</div>
+            <button type="button" data-close-btn class="close-btn" aria-label="Close dialog">&times;</button>
         </div>
         <div class="modal-body">
             To be released asap.<br>
             Contact me if you want a pre-release version.
         </div>
-    </div>
-
-    <div id="overlay"></div>
+    </dialog>
 
     <footer id="main-footer">
         <div class="icons">
-            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile (opens in a new tab)">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-hackerrank"></i>
+            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="HackerRank profile (opens in a new tab)">
+                <i class="fab fa-hackerrank" aria-hidden="true"></i>
             </a>
-            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i>
+            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer" aria-label="Telegram profile (opens in a new tab)">
+                <i class="fab fa-telegram" aria-hidden="true"></i>
             </a>
-            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-envelope"></i>
+            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer" aria-label="Send me an email (opens in a new tab)">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
         <div class="copyright">
-            This website is cookie-free! <i class="fa fa-cookie-bite"></i><br>
-            Made with <i class="fa fa-heart"></i> and <i class="fa fa-code"></i> by me &copy;
+            This website is cookie-free! <i class="fa fa-cookie-bite" aria-hidden="true"></i><br>
+            Made with <span class="visually-hidden">love</span><i class="fa fa-heart" aria-hidden="true"></i> and <span class="visually-hidden">code</span><i class="fa fa-code" aria-hidden="true"></i> by me &copy;
             2021
             <span id="year-range"></span>
             <script>

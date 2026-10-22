@@ -15,13 +15,13 @@
 
 <body>
     <header>
-        <div class="menu-btn">
+        <button type="button" class="menu-btn" aria-label="Toggle navigation menu" aria-controls="site-menu" aria-expanded="false">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
             <div class="btn-line"></div>
-        </div>
+        </button>
 
-        <nav class="menu">
+        <nav class="menu" id="site-menu">
             <div class="menu-photo">
                 <div class="portrait"></div>
             </div>
@@ -48,7 +48,7 @@
         <div class="container">
             <div class="contact-info">
                 <div class="infobox">
-                    <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
                     <div class="text">
                         <h3>Address</h3>
                         <p id="address">Hey, there! Here is random text,<br>
@@ -57,19 +57,19 @@
                 </div>
                 <div class="infobox">
                     <div class="icon">
-                        <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer">
-                            <i class="fa fa-envelope"></i>
+                        <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer" aria-label="Send me an email (opens in a new tab)">
+                            <i class="fa fa-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
                     <div class="text">
                         <h3>Email</h3>
-                        <p><i class="fas fa-hand-point-left"></i>
+                        <p><i class="fas fa-hand-point-left" aria-hidden="true"></i>
                             Click the button or fill out the form!
                         </p>
                     </div>
                 </div>
                 <div class="infobox">
-                    <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                    <div class="icon"><i class="fab fa-whatsapp" aria-hidden="true"></i></div>
                     <div class="text">
                         <h3>Phone</h3>
                         <p id="msg">Available in <span id="count">10</span> seconds.</p>
@@ -77,15 +77,15 @@
                 </div>
                 <div class="infobox">
                     <div class="icon">
-                        <a href="https://www.buymeacoffee.com/emanuele" target="_blank" rel="noopener noreferrer">
-                            <i class="fas fa-coffee"></i>
+                        <a href="https://www.buymeacoffee.com/emanuele" target="_blank" rel="noopener noreferrer" aria-label="Support me on Buy Me a Coffee (opens in a new tab)">
+                            <i class="fas fa-coffee" aria-hidden="true"></i>
                         </a>
                     </div>
                     <div class="text">
                         <h3>Support</h3>
-                        <p><i class="fas fa-hand-point-left"></i>
+                        <p><i class="fas fa-hand-point-left" aria-hidden="true"></i>
                             If you want to offer me a coffee or a beer!
-                            <i class="fas fa-smile-wink"></i>
+                            <i class="fas fa-smile-wink" aria-hidden="true"></i>
                         </p>
                     </div>
                 </div>
@@ -93,24 +93,24 @@
             <div class="contact-form">
                 <form action="https://formsubmit.co/cd3ef3764833bcf8fb82cb66777a5dc4" method="POST">
                     <h2>Send <span class="text-secondary">message</span></h2>
-                    <input type="text" name="_honey" style="display:none">
+                    <input type="text" name="_honey" style="display:none" aria-hidden="true" tabindex="-1">
                     <input type="hidden" name="_subject" value="New submission!">
                     <input type="hidden" name="_template" value="box">
                     <input type="hidden" name="_next" value="https://mnau23.github.io/thanks.html">
 
                     <div class="input-box">
-                        <input type="text" name="Name" required>
-                        <span>Full name</span>
+                        <input type="text" id="contact-name" name="Name" required>
+                        <label for="contact-name">Full name</label>
                     </div>
 
                     <div class="input-box">
-                        <input type="email" name="Email" required>
-                        <span>Email</span>
+                        <input type="email" id="contact-email" name="Email" required>
+                        <label for="contact-email">Email</label>
                     </div>
 
                     <div class="input-box">
-                        <textarea name="Message" rows="4" required></textarea>
-                        <span>Write your message</span>
+                        <textarea id="contact-message" name="Message" rows="4" required></textarea>
+                        <label for="contact-message">Write your message</label>
                     </div>
 
                     <button type="submit">Send</button>
@@ -121,28 +121,28 @@
 
     <footer id="main-footer">
         <div class="icons">
-            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile (opens in a new tab)">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-hackerrank"></i>
+            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="HackerRank profile (opens in a new tab)">
+                <i class="fab fa-hackerrank" aria-hidden="true"></i>
             </a>
-            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i>
+            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer" aria-label="Telegram profile (opens in a new tab)">
+                <i class="fab fa-telegram" aria-hidden="true"></i>
             </a>
-            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-envelope"></i>
+            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer" aria-label="Send me an email (opens in a new tab)">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
         <div class="copyright">
-            This website is cookie-free! <i class="fa fa-cookie-bite"></i><br>
-            Made with <i class="fa fa-heart"></i> and <i class="fa fa-code"></i> by me &copy;
+            This website is cookie-free! <i class="fa fa-cookie-bite" aria-hidden="true"></i><br>
+            Made with <span class="visually-hidden">love</span><i class="fa fa-heart" aria-hidden="true"></i> and <span class="visually-hidden">code</span><i class="fa fa-code" aria-hidden="true"></i> by me &copy;
             2021
             <span id="year-range"></span>
             <script>

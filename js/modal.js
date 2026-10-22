@@ -1,38 +1,37 @@
-const openModalBtns = document.querySelectorAll('[data-modal-target]')
-const closeModalBtns = document.querySelectorAll('[data-close-btn]')
-const overlay = document.getElementById('overlay')
+const openModalButtons = document.querySelectorAll('[data-modal-target]')
+const closeModalButtons = document.querySelectorAll('[data-close-btn]')
+const dialogs = document.querySelectorAll('dialog.modal')
 
-openModalBtns.forEach(button => {
+openModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = document.querySelector(button.dataset.modalTarget)
-        openModal(modal)
+        const dialog = document.querySelector(button.dataset.modalTarget)
+        if (!(dialog instanceof HTMLDialogElement) || dialog.open) return
+        dialog.showModal()
+        dialog.focus()
     })
 })
 
-if (overlay) {
-    overlay.addEventListener('click', () => {
-        const modals = document.querySelectorAll('.modal.active')
-        modals.forEach(modal => {
-            closeModal(modal)
-        })
-    })
-}
-
-closeModalBtns.forEach(button => {
+closeModalButtons.forEach(button => {
     button.addEventListener('click', () => {
-        const modal = button.closest('.modal')
-        closeModal(modal)
+        const dialog = button.closest('dialog')
+        if (dialog?.open) dialog.close()
     })
 })
 
-function openModal(modal) {
-    if (modal == null || overlay == null) return
-    modal.classList.add('active')
-    overlay.classList.add('active')
-}
+dialogs.forEach(dialog => {
+    dialog.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') return
+        event.preventDefault()
+        dialog.close()
+    })
 
-function closeModal(modal) {
-    if (modal == null || overlay == null) return
-    modal.classList.remove('active')
-    overlay.classList.remove('active')
-}
+    dialog.addEventListener('click', event => {
+        if (event.target !== dialog) return
+
+        const bounds = dialog.getBoundingClientRect()
+        const clickedOutside = event.clientX < bounds.left || event.clientX > bounds.right
+            || event.clientY < bounds.top || event.clientY > bounds.bottom
+
+        if (clickedOutside) dialog.close()
+    })
+})

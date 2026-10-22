@@ -15,13 +15,13 @@
 
 <body>
     <header>
-        <div class="menu-btn">
+        <button type="button" class="menu-btn" aria-label="Toggle navigation menu" aria-controls="site-menu" aria-expanded="false">
             <div class="btn-line"></div>
             <div class="btn-line"></div>
             <div class="btn-line"></div>
-        </div>
+        </button>
 
-        <nav class="menu">
+        <nav class="menu" id="site-menu">
             <div class="menu-photo">
                 <div class="portrait"></div>
             </div>
@@ -47,38 +47,38 @@
         <div class="thx">
             <p>Form has been submitted correctly.<br>
                 It will be my pleasure to reply you as soon as possible!
-                <i class="fas fa-smile-beam"></i>
+                <i class="fas fa-smile-beam" aria-hidden="true"></i>
             </p>
             <a href="./" class="btn-light-round-thx">
-                <i class="fas fa-home"></i> Back to home
+                <i class="fas fa-home" aria-hidden="true"></i> Back to home
             </a>
         </div>
     </main>
 
     <footer id="main-footer">
         <div class="icons">
-            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-instagram"></i>
+            <a href="https://www.instagram.com/emanuele.perico" target="_blank" rel="noopener noreferrer" aria-label="Instagram profile (opens in a new tab)">
+                <i class="fab fa-instagram" aria-hidden="true"></i>
             </a>
-            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/emanueleperico" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)">
+                <i class="fab fa-linkedin" aria-hidden="true"></i>
             </a>
-            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-github"></i>
+            <a href="https://github.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)">
+                <i class="fab fa-github" aria-hidden="true"></i>
             </a>
-            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-hackerrank"></i>
+            <a href="https://www.hackerrank.com/mnau23" target="_blank" rel="noopener noreferrer" aria-label="HackerRank profile (opens in a new tab)">
+                <i class="fab fa-hackerrank" aria-hidden="true"></i>
             </a>
-            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-telegram"></i>
+            <a href="https://t.me/mnau23" target="_blank" rel="noopener noreferrer" aria-label="Telegram profile (opens in a new tab)">
+                <i class="fab fa-telegram" aria-hidden="true"></i>
             </a>
-            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer">
-                <i class="fa fa-envelope"></i>
+            <a href="https://formsubmit.co/el/voteva" target="_blank" rel="noopener noreferrer" aria-label="Send me an email (opens in a new tab)">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
             </a>
         </div>
         <div class="copyright">
-            This website is cookie-free! <i class="fa fa-cookie-bite"></i><br>
-            Made with <i class="fa fa-heart"></i> and <i class="fa fa-code"></i> by me &copy;
+            This website is cookie-free! <i class="fa fa-cookie-bite" aria-hidden="true"></i><br>
+            Made with <span class="visually-hidden">love</span><i class="fa fa-heart" aria-hidden="true"></i> and <span class="visually-hidden">code</span><i class="fa fa-code" aria-hidden="true"></i> by me &copy;
             2021
             <span id="year-range"></span>
             <script>
