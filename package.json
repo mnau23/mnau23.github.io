@@ -16,6 +16,6 @@
   },
   "devDependencies": {
     "pa11y-ci": "5.0.0",
-    "serve": "14.2.6"
+    "serve": "14.2.8"
   }
 }
